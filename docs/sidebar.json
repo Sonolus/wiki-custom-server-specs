@@ -1,0 +1,42 @@
+{
+    "Custom Server Specs": {
+        "Introduction": "/",
+        "Overview": "/overview",
+        "Frameworks and Tools": "/frameworks-and-tools"
+    },
+    "Endpoints": {
+        "GET /info": "/endpoints/get-info",
+        "GET /levels/list": "/endpoints/get-levels-list",
+        "GET /skins/list": "/endpoints/get-skins-list",
+        "GET /backgrounds/list": "/endpoints/get-backgrounds-list",
+        "GET /effects/list": "/endpoints/get-effects-list",
+        "GET /particles/list": "/endpoints/get-particles-list",
+        "GET /engines/list": "/endpoints/get-engines-list",
+        "GET /levels/{name}": "/endpoints/get-levels-name",
+        "GET /skins/{name}": "/endpoints/get-skins-name",
+        "GET /backgrounds/{name}": "/endpoints/get-backgrounds-name",
+        "GET /effects/{name}": "/endpoints/get-effects-name",
+        "GET /particles/{name}": "/endpoints/get-particles-name",
+        "GET /engines/{name}": "/endpoints/get-engines-name"
+    },
+    "Headers": {
+        "Sonolus-Version": "/headers/sonolus-version"
+    },
+    "Query Parameters": {
+        "localization": "/query-parameters/localization",
+        "page": "/query-parameters/page",
+        "keywords": "/query-parameters/keywords"
+    },
+    "Misc": {
+        "Resources": "/misc/resources",
+        "SRL": "/misc/srl",
+        "ItemList": "/misc/item-list",
+        "ItemDetails": "/misc/item-details",
+        "LevelItem": "/misc/level-item",
+        "SkinItem": "/misc/skin-item",
+        "BackgroundItem": "/misc/background-item",
+        "EffectItem": "/misc/effect-item",
+        "ParticleItem": "/misc/particle-item",
+        "EngineItem": "/misc/engine-item"
+    }
+}
