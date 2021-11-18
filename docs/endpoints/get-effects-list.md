@@ -13,7 +13,7 @@
 | Query Parameter | Value    | Description                                             |
 | :-------------- | :------- | :------------------------------------------------------ |
 | `localization`  | `string` | See [`localization`](../query-parameters/localization). |
-| `page`          | `string` | See [`page`](../query-parameters/page).                 |
+| `page`          | `number` | See [`page`](../query-parameters/page).                 |
 | `keywords`      | `string` | See [`keywords`](../query-parameters/keywords).         |
 
 ## Response Syntax
