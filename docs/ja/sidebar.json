@@ -1,0 +1,57 @@
+[
+  {
+    "title": "カスタムサーバー仕様",
+    "pages": {
+      "/": "イントロダクション",
+      "/overview": "概要",
+      "/frameworks-and-tools": "フレームワークとツール"
+    }
+  },
+  {
+    "title": "エンドポイント",
+    "pages": {
+      "/endpoints/get-info": "GET /info",
+      "/endpoints/get-levels-list": "GET /levels/list",
+      "/endpoints/get-skins-list": "GET /skins/list",
+      "/endpoints/get-backgrounds-list": "GET /backgrounds/list",
+      "/endpoints/get-effects-list": "GET /effects/list",
+      "/endpoints/get-particles-list": "GET /particles/list",
+      "/endpoints/get-engines-list": "GET /engines/list",
+      "/endpoints/get-levels-name": "GET /levels/{name}",
+      "/endpoints/get-skins-name": "GET /skins/{name}",
+      "/endpoints/get-backgrounds-name": "GET /backgrounds/{name}",
+      "/endpoints/get-effects-name": "GET /effects/{name}",
+      "/endpoints/get-particles-name": "GET /particles/{name}",
+      "/endpoints/get-engines-name": "GET /engines/{name}"
+    }
+  },
+  {
+    "title": "ヘッダー",
+    "pages": {
+      "/headers/sonolus-version": "Sonolus-Version"
+    }
+  },
+  {
+    "title": "クエリパラメータ",
+    "pages": {
+      "/query-parameters/localization": "localization",
+      "/query-parameters/page": "page",
+      "/query-parameters/keywords": "keywords"
+    }
+  },
+  {
+    "title": "その他",
+    "pages": {
+      "/misc/resources": "Resources",
+      "/misc/srl": "SRL",
+      "/misc/item-list": "ItemList",
+      "/misc/item-details": "ItemDetails",
+      "/misc/level-item": "LevelItem",
+      "/misc/skin-item": "SkinItem",
+      "/misc/background-item": "BackgroundItem",
+      "/misc/effect-item": "EffectItem",
+      "/misc/particle-item": "ParticleItem",
+      "/misc/engine-item": "EngineItem"
+    }
+  }
+]
