@@ -10,11 +10,11 @@
 
 ## Query Parameters
 
-| Query Parameter | Value    | Description                                             |
-| :-------------- | :------- | :------------------------------------------------------ |
-| `localization`  | `string` | See [`localization`](../query-parameters/localization). |
-| `page`          | `number` | See [`page`](../query-parameters/page).                 |
-| `keywords`      | `string` | See [`keywords`](../query-parameters/keywords).         |
+| Query Parameter         | Value    | Description                                                                 |
+| :---------------------- | :------- | :-------------------------------------------------------------------------- |
+| `localization`          | `string` | See [`localization`](../query-parameters/localization).                     |
+| `page`                  | `number` | See [`page`](../query-parameters/page).                                     |
+| Search Query Parameters | `any`    | See [Search Query Parameters](../query-parameters/search-query-parameters). |
 
 ## Response Syntax
 
