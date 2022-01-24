@@ -24,6 +24,7 @@ type LevelItem = {
     useParticle: UseItem<ParticleItem>
     cover: SRL<'LevelCover'>
     bgm: SRL<'LevelBgm'>
+    preview?: SRL<'LevelPreview'>
     data: SRL<'LevelData'>
 }
 ```
