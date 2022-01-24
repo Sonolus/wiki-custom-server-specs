@@ -5,6 +5,12 @@
 ## Syntax
 
 ```ts
+type SRL<T extends ResourceType> = {
+    type: T
+    hash: string
+    url: string
+}
+
 type ResourceType =
     | 'LevelCover'
     | 'LevelBgm'
@@ -26,12 +32,6 @@ type ResourceType =
     | 'EngineThumbnail'
     | 'EngineData'
     | 'EngineConfiguration'
-
-type SRL<T extends ResourceType> = {
-    type: T
-    hash: string
-    url: string
-}
 ```
 
 ### `type`

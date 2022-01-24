@@ -5,11 +5,6 @@
 ## Syntax
 
 ```ts
-type UseItem<T> = {
-    useDefault: boolean
-    item?: T
-}
-
 type LevelItem = {
     name: string
     version: 1
@@ -26,6 +21,11 @@ type LevelItem = {
     bgm: SRL<'LevelBgm'>
     preview?: SRL<'LevelPreview'>
     data: SRL<'LevelData'>
+}
+
+type UseItem<T> = {
+    useDefault: boolean
+    item?: T
 }
 ```
 
