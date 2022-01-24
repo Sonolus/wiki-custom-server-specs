@@ -36,7 +36,8 @@
         "pages": {
             "/query-parameters/localization": "localization",
             "/query-parameters/page": "page",
-            "/query-parameters/keywords": "keywords"
+            "/query-parameters/keywords": "keywords",
+            "/query-parameters/search-query-parameters": "Search Query Parameters"
         }
     },
     {
