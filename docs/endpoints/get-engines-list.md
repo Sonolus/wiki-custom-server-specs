@@ -29,6 +29,9 @@ type EngineList = ItemList<EngineItem>
     "pageCount": 5,
     "items": [
         // ...
-    ]
+    ],
+    "search": {
+        //...
+    }
 }
 ```

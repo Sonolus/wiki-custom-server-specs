@@ -29,6 +29,9 @@ type EffectList = ItemList<EffectItem>
     "pageCount": 5,
     "items": [
         // ...
-    ]
+    ],
+    "search": {
+        //...
+    }
 }
 ```

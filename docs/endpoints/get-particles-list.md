@@ -29,6 +29,9 @@ type ParticleList = ItemList<ParticleItem>
     "pageCount": 5,
     "items": [
         // ...
-    ]
+    ],
+    "search": {
+        //...
+    }
 }
 ```

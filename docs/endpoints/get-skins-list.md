@@ -29,6 +29,9 @@ type SkinList = ItemList<SkinItem>
     "pageCount": 5,
     "items": [
         // ...
-    ]
+    ],
+    "search": {
+        //...
+    }
 }
 ```

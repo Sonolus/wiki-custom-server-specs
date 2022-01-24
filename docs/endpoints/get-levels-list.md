@@ -29,6 +29,9 @@ type LevelList = ItemList<LevelItem>
     "pageCount": 5,
     "items": [
         // ...
-    ]
+    ],
+    "search": {
+        //...
+    }
 }
 ```

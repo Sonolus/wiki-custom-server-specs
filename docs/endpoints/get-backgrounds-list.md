@@ -29,6 +29,9 @@ type BackgroundList = ItemList<BackgroundItem>
     "pageCount": 5,
     "items": [
         // ...
-    ]
+    ],
+    "search": {
+        //...
+    }
 }
 ```
