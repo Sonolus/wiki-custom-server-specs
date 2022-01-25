@@ -36,7 +36,7 @@
     "pages": {
       "/query-parameters/localization": "localization",
       "/query-parameters/page": "page",
-      "/query-parameters/keywords": "keywords"
+      "/query-parameters/search-query-parameters": "検索クエリパラメータ"
     }
   },
   {
@@ -44,6 +44,7 @@
     "pages": {
       "/misc/resources": "Resources",
       "/misc/srl": "SRL",
+      "/misc/search": "Search",
       "/misc/item-list": "ItemList",
       "/misc/item-details": "ItemDetails",
       "/misc/level-item": "LevelItem",
