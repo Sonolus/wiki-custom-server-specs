@@ -14,7 +14,7 @@
 :-- | :-- | :--
 `localization` | `string` | [`localization`](../query-parameters/localization)参照
 `page` | `number` | [`page`](../query-parameters/page)参照
-`keywords` | `string` | [`keywords`](../query-parameters/keywords)参照
+検索クエリパラメータ | `any` | [検索クエリパラメータ](../query-parameters/search-query-parameters)参照
 
 ## レスポンスの構文
 
@@ -29,6 +29,9 @@ type EffectList = ItemList<EffectItem>
     "pageCount": 5,
     "items": [
         // ...
-    ]
+    ],
+    "search": {
+        //...
+    }
 }
 ```

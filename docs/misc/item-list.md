@@ -5,9 +5,10 @@
 ## Syntax
 
 ```ts
-type ItemList<T> = {
+type type ItemList<T> = {
     pageCount: number
     items: T[]
+    search: Search
 }
 ```
 
@@ -22,7 +23,10 @@ If `-1` is used, the list is treated as having infinite pagination
     "pageCount": 5,
     "items": [
         // ...
-    ]
+    ],
+    "search": {
+        //...
+    }
 }
 ```
 

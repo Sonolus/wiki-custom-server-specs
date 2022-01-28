@@ -18,12 +18,17 @@
 
 ```ts
 type ServerInfo = {
-    levels: LevelItem[]
-    skins: SkinItem[]
-    backgrounds: BackgroundItem[]
-    effects: EffectItem[]
-    particles: ParticleItem[]
-    engines: EngineItem[]
+    levels: Section<LevelItem>
+    skins: Section<SkinItem>
+    backgrounds: Section<BackgroundItem>
+    effects: Section<EffectItem>
+    particles: Section<ParticleItem>
+    engines: Section<EngineItem>
+}
+
+type Section<T> = {
+    items: T[]
+    search: Search
 }
 ```
 
@@ -31,24 +36,54 @@ type ServerInfo = {
 
 ```json
 {
-    "levels": [
-        // ...
-    ],
-    "skins": [
-        // ...
-    ],
-    "backgrounds": [
-        // ...
-    ],
-    "effects": [
-        // ...
-    ],
-    "particles": [
-        // ...
-    ],
-    "engines": [
-        // ...
-    ]
+    "levels": {
+        "items": [
+            // ...
+        ],
+        "search": {
+            // ...
+        }
+    },
+    "skins": {
+        "items": [
+            // ...
+        ],
+        "search": {
+            // ...
+        }
+    },
+    "backgrounds": {
+        "items": [
+            // ...
+        ],
+        "search": {
+            // ...
+        }
+    },
+    "effects": {
+        "items": [
+            // ...
+        ],
+        "search": {
+            // ...
+        }
+    },
+    "particles": {
+        "items": [
+            // ...
+        ],
+        "search": {
+            // ...
+        }
+    },
+    "engines": {
+        "items": [
+            // ...
+        ],
+        "search": {
+            // ...
+        }
+    }
 }
 ```
 
