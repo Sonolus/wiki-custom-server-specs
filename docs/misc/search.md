@@ -57,26 +57,24 @@ Name of query parameter used to identify the search option.
 
 ```json
 {
-    "search": {
-        "options": [
-            {
-                "query": "keywords",
-                "name": "#KEYWORDS",
-                "type": "text",
-                "placeholder": "#KEYWORDS"
-            },
-            {
-                "query": "minRating",
-                "name": "#RATING_MINIMUM",
-                "type": "slider",
-                "def": 0,
-                "min": 0,
-                "max": 100,
-                "step": 1,
-                "display": "number"
-            }
-        ]
-    }
+    "options": [
+        {
+            "query": "keywords",
+            "name": "#KEYWORDS",
+            "type": "text",
+            "placeholder": "#KEYWORDS"
+        },
+        {
+            "query": "minRating",
+            "name": "#RATING_MINIMUM",
+            "type": "slider",
+            "def": 0,
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "display": "number"
+        }
+    ]
 }
 ```
 
