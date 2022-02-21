@@ -31,6 +31,7 @@ type ResourceType =
     | 'ParticleTexture'
     | 'EngineThumbnail'
     | 'EngineData'
+    | 'EngineRom'
     | 'EngineConfiguration'
 ```
 
