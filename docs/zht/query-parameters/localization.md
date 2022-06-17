@@ -18,4 +18,4 @@
 
 為了提供最佳的遊玩體驗，會按照與語言來提供相應的伺服器本地化內容。
 
-目前支持的Sonolus語言有：`en`、`zh-hans`、`zh-hant`、`ja`、`ko`、`es`和`in`。
+目前Sonolus支持的語言有：`en`、`zh-hans`、`zh-hant`、`ja`、`ko`、`es`和`in`。
