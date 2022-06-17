@@ -14,7 +14,7 @@ Header | 數值 | 描述
 :-- | :-- | :--
 `localization` | `string` | 詳見[`localization`](../query-parameters/localization)。
 `page` | `number` | 詳見[`page`](../query-parameters/page)。
-`keywords` | `string` | 詳見[`keywords`](../query-parameters/keywords)。
+搜尋的查詢函數 | `any` | 詳見[Search Query Parameters](../query-parameters/search-query-parameters)。
 
 ## 響應語法
 
@@ -29,6 +29,9 @@ type EngineList = ItemList<EngineItem>
     "pageCount": 5,
     "items": [
         // ...
-    ]
+    ],
+    "search": {
+        //...
+    }
 }
 ```
