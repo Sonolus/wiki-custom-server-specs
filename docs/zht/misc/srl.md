@@ -5,9 +5,16 @@
 ## 語法
 
 ```ts
+type SRL<T extends ResourceType> = {
+    type: T
+    hash: string
+    url: string
+}
+
 type ResourceType =
     | 'LevelCover'
     | 'LevelBgm'
+    | 'LevelPreview'
     | 'LevelData'
     | 'SkinThumbnail'
     | 'SkinData'
@@ -24,13 +31,8 @@ type ResourceType =
     | 'ParticleTexture'
     | 'EngineThumbnail'
     | 'EngineData'
+    | 'EngineRom'
     | 'EngineConfiguration'
-
-type SRL<T extends ResourceType> = {
-    type: T
-    hash: string
-    url: string
-}
 ```
 
 ### `type`
