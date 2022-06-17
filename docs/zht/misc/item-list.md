@@ -5,9 +5,10 @@
 ## 語法
 
 ```ts
-type ItemList<T> = {
+type type ItemList<T> = {
     pageCount: number
     items: T[]
+    search: Search
 }
 ```
 
@@ -22,7 +23,10 @@ type ItemList<T> = {
     "pageCount": 5,
     "items": [
         // ...
-    ]
+    ],
+    "search": {
+        //...
+    }
 }
 ```
 
