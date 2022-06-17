@@ -7,7 +7,7 @@
 ```ts
 type EngineItem = {
     name: string
-    version: 4
+    version: 5
     title: string
     subtitle: string
     author: string
@@ -17,6 +17,7 @@ type EngineItem = {
     particle: ParticleItem
     thumbnail: SRL<'EngineThumbnail'>
     data: SRL<'EngineData'>
+    rom?: SRL<'EngineRom'>
     configuration: SRL<'EngineConfiguration'>
 }
 ```
@@ -34,9 +35,9 @@ type EngineItem = {
 ```json
 {
     "name": "bandori",
-    "version": 4,
+    "version": 5,
     "title": "BanG Dream!",
-    "subtitle": "BanG Dream! 少女樂團派對！",
+    "subtitle": "BanG Dream! Girls Band Party!",
     "author": "Burrito",
     "skin": {
         // ...
