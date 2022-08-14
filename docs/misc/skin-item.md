@@ -25,7 +25,7 @@ Unique name which identifies the skin.
 
 ```json
 {
-    "name": "bandori.n00.f00.l00",
+    "name": "bandori-n00-f00-l00",
     "version": 2,
     "title": "TYPE1 / TYPE1 / レーンスキン00",
     "subtitle": "BanG Dream! Girls Band Party!",

@@ -25,7 +25,7 @@ Unique name which identifies the effect.
 
 ```json
 {
-    "name": "bandori.skin00",
+    "name": "bandori-00",
     "version": 3,
     "title": "SEスキン00",
     "subtitle": "BanG Dream! Girls Band Party!",
