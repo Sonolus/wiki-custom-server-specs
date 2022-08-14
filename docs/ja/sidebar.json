@@ -10,19 +10,19 @@
   {
     "title": "エンドポイント",
     "pages": {
-      "/endpoints/get-info": "GET /info",
-      "/endpoints/get-levels-list": "GET /levels/list",
-      "/endpoints/get-skins-list": "GET /skins/list",
-      "/endpoints/get-backgrounds-list": "GET /backgrounds/list",
-      "/endpoints/get-effects-list": "GET /effects/list",
-      "/endpoints/get-particles-list": "GET /particles/list",
-      "/endpoints/get-engines-list": "GET /engines/list",
-      "/endpoints/get-levels-name": "GET /levels/{name}",
-      "/endpoints/get-skins-name": "GET /skins/{name}",
-      "/endpoints/get-backgrounds-name": "GET /backgrounds/{name}",
-      "/endpoints/get-effects-name": "GET /effects/{name}",
-      "/endpoints/get-particles-name": "GET /particles/{name}",
-      "/endpoints/get-engines-name": "GET /engines/{name}"
+      "/endpoints/get-sonolus-info": "GET /sonolus/info",
+      "/endpoints/get-sonolus-levels-list": "GET /sonolus/levels/list",
+      "/endpoints/get-sonolus-skins-list": "GET /sonolus/skins/list",
+      "/endpoints/get-sonolus-backgrounds-list": "GET /sonolus/backgrounds/list",
+      "/endpoints/get-sonolus-effects-list": "GET /sonolus/effects/list",
+      "/endpoints/get-sonolus-particles-list": "GET /sonolus/particles/list",
+      "/endpoints/get-sonolus-engines-list": "GET /sonolus/engines/list",
+      "/endpoints/get-sonolus-levels-name": "GET /sonolus/levels/{name}",
+      "/endpoints/get-sonolus-skins-name": "GET /sonolus/skins/{name}",
+      "/endpoints/get-sonolus-backgrounds-name": "GET /sonolus/backgrounds/{name}",
+      "/endpoints/get-sonolus-effects-name": "GET /sonolus/effects/{name}",
+      "/endpoints/get-sonolus-particles-name": "GET /sonolus/particles/{name}",
+      "/endpoints/get-sonolus-engines-name": "GET /sonolus/engines/{name}"
     }
   },
   {
