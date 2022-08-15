@@ -25,10 +25,10 @@ type ParticleItem = {
 
 ```json
 {
-    "name": "bandori.1",
+    "name": "bandori-1",
     "version": 1,
-    "title": "效果類型1",
-    "subtitle": "BanG Dream! 少女樂團派對！",
+    "title": "Effect Type 1",
+    "subtitle": "BanG Dream! Girls Band Party!",
     "author": "Sonolus",
     "thumbnail": {
         // ...
