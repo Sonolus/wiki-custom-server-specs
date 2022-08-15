@@ -43,7 +43,7 @@ type UseItem<T> = {
 
 ```json
 {
-    "name": "bandori.1.expert",
+    "name": "bandori-1-expert",
     "version": 1,
     "rating": 20,
     "title": "Yes! BanG_Dream!",

@@ -25,7 +25,7 @@ type ParticleItem = {
 
 ```json
 {
-    "name": "bandori.1",
+    "name": "bandori-1",
     "version": 1,
     "title": "Effect Type 1",
     "subtitle": "BanG Dream! Girls Band Party!",
