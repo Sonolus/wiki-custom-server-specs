@@ -20,6 +20,12 @@ JSONリソースは`LevelData`などのタイプに使用されます。
 
 `.json`のみがサポートされており、データはGZipで圧縮する必要があります。(zlibではなくgzipである必要があります)
 
+## Archive Resources
+
+アーカイブリソースは`EffectAudio`などのタイプに使用されます。
+
+`.zip`のみがサポートされています。
+
 ## Binary Resources
 
 バイナリリソースは、 `EngineRom`などのタイプに使用されます。
