@@ -25,11 +25,11 @@ type SkinItem = {
 
 ```json
 {
-    "name": "bandori.n00.f00.l00",
+    "name": "bandori-n00-f00-l00",
     "version": 2,
-    "title": "類型1／類型1／佈景類型00",
-    "subtitle": "BanG Dream! 少女樂團派對！",
-    "author": "BanG Dream! 少女樂團派對！",
+    "title": "TYPE1 / TYPE1 / レーンスキン00",
+    "subtitle": "BanG Dream! Girls Band Party!",
+    "author": "BanG Dream! Girls Band Party!",
     "thumbnail": {
         // ...
     },

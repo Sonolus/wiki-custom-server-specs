@@ -26,11 +26,11 @@ type BackgroundItem = {
 
 ```json
 {
-    "name": "bandori.live.00",
+    "name": "bandori-live-00",
     "version": 2,
-    "title": "默認背景",
-    "subtitle": "BanG Dream! 少女樂團派對！",
-    "author": "BanG Dream! 少女樂團派對！",
+    "title": "デフォルト背景",
+    "subtitle": "BanG Dream! Girls Band Party!",
+    "author": "BanG Dream! Girls Band Party!",
     "thumbnail": {
         // ...
     },

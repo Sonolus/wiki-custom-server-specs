@@ -7,12 +7,13 @@
 ```ts
 type EffectItem = {
     name: string
-    version: 2
+    version: 3
     title: string
     subtitle: string
     author: string
     thumbnail: SRL<'EffectThumbnail'>
     data: SRL<'EffectData'>
+    audio: SRL<'EffectAudio'>
 }
 ```
 
@@ -24,15 +25,18 @@ type EffectItem = {
 
 ```json
 {
-    "name": "bandori.skin00",
-    "version": 2,
-    "title": "SE佈景00",
-    "subtitle": "BanG Dream! 少女樂團派對！",
-    "author": "BanG Dream! 少女樂團派對！",
+    "name": "bandori-00",
+    "version": 3,
+    "title": "SEスキン00",
+    "subtitle": "BanG Dream! Girls Band Party!",
+    "author": "BanG Dream! Girls Band Party!",
     "thumbnail": {
         // ...
     },
     "data": {
+        // ...
+    },
+    "audio": {
         // ...
     }
 }

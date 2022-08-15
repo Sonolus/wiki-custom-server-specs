@@ -25,7 +25,7 @@ type ResourceType =
     | 'BackgroundConfiguration'
     | 'EffectThumbnail'
     | 'EffectData'
-    | 'EffectClip'
+    | 'EffectAudio'
     | 'ParticleThumbnail'
     | 'ParticleData'
     | 'ParticleTexture'
