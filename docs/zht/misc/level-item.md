@@ -43,12 +43,12 @@ type UseItem<T> = {
 
 ```json
 {
-    "name": "bandori.1.expert",
+    "name": "bandori-1-expert",
     "version": 1,
     "rating": 20,
     "title": "Yes! BanG_Dream!",
     "artists": "Poppin'Party",
-    "author": "BanG Dream! 少女樂團派對！",
+    "author": "BanG Dream! Girls Band Party!",
     "engine": {
         // ...
     },
