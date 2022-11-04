@@ -22,7 +22,8 @@
             "/endpoints/get-sonolus-backgrounds-name": "GET /sonolus/backgrounds/{name}",
             "/endpoints/get-sonolus-effects-name": "GET /sonolus/effects/{name}",
             "/endpoints/get-sonolus-particles-name": "GET /sonolus/particles/{name}",
-            "/endpoints/get-sonolus-engines-name": "GET /sonolus/engines/{name}"
+            "/endpoints/get-sonolus-engines-name": "GET /sonolus/engines/{name}",
+            "/endpoints/post-sonolus-authenticate": "POST /sonolus/authenticate"
         }
     },
     {
