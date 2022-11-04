@@ -5,6 +5,7 @@ While you can certainly make your own custom servers from scratch, there are als
 Frameworks:
 
 -   [sonolus-express](https://github.com/Sonolus/sonolus-express): TypeScript based developer toolkit for Sonolus servers with [Express.js](https://expressjs.com).
+-   [sonolus-server-web](https://github.com/Sonolus/sonolus-server-web): A lean and beautiful web SPA client for Sonolus servers.
 
 Tools:
 
