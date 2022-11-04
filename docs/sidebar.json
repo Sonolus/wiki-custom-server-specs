@@ -42,6 +42,7 @@
     {
         "title": "Misc",
         "pages": {
+            "/misc/deep-links-and-share-links": "Deep Links and Share Links",
             "/misc/resources": "Resources",
             "/misc/srl": "SRL",
             "/misc/search": "Search",
