@@ -29,7 +29,9 @@
     {
         "title": "Headers",
         "pages": {
-            "/headers/sonolus-version": "Sonolus-Version"
+            "/headers/sonolus-version": "Sonolus-Version",
+            "/headers/sonolus-session-id": "Sonolus-Session-Id",
+            "/headers/sonolus-session-data": "Sonolus-Session-Data"
         }
     },
     {
