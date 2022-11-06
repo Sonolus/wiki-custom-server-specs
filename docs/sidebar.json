@@ -56,7 +56,8 @@
             "/misc/background-item": "BackgroundItem",
             "/misc/effect-item": "EffectItem",
             "/misc/particle-item": "ParticleItem",
-            "/misc/engine-item": "EngineItem"
+            "/misc/engine-item": "EngineItem",
+            "/misc/user-profile": "UserProfile"
         }
     }
 ]
