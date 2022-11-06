@@ -10,6 +10,24 @@
 | `page`                  | `number` | See [`page`](../query-parameters/page.md).                                     |
 | Search Query Parameters | `any`    | See [Search Query Parameters](../query-parameters/search-query-parameters.md). |
 
+## Request Headers
+
+| Header                 | Value    | Description                                                                 |
+| :--------------------- | :------- | :-------------------------------------------------------------------------- |
+| `Sonolus-Session-Id`   | `string` | Optional, see [`Sonolus-Session-Id`](../headers/sonolus-session-id.md).     |
+| `Sonolus-Session-Data` | `string` | Optional, see [`Sonolus-Session-Data`](../headers/sonolus-session-data.md). |
+
+## Request Body
+
+None.
+
+## Response Code
+
+| Code               | Description                         |
+| :----------------- | :---------------------------------- |
+| `200 OK`           |                                     |
+| `401 Unauthorized` | Authentication required or expired. |
+
 ## Response Headers
 
 | Header            | Value    | Description                                                       |

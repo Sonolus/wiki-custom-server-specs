@@ -8,6 +8,24 @@
 | :-------------- | :------- | :--------------------------------------------------------- |
 | `localization`  | `string` | See [`localization`](../query-parameters/localization.md). |
 
+## Request Headers
+
+| Header                 | Value    | Description                                                                 |
+| :--------------------- | :------- | :-------------------------------------------------------------------------- |
+| `Sonolus-Session-Id`   | `string` | Optional, see [`Sonolus-Session-Id`](../headers/sonolus-session-id.md).     |
+| `Sonolus-Session-Data` | `string` | Optional, see [`Sonolus-Session-Data`](../headers/sonolus-session-data.md). |
+
+## Request Body
+
+None.
+
+## Response Code
+
+| Code               | Description                         |
+| :----------------- | :---------------------------------- |
+| `200 OK`           |                                     |
+| `401 Unauthorized` | Authentication required or expired. |
+
 ## Response Headers
 
 | Header            | Value    | Description                                                       |
