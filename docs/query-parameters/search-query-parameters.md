@@ -10,4 +10,4 @@ Search query parameters specifies the search parameters of item list view based 
 
 ## Remarks
 
-See [Search](../misc/search).
+See [Search](../misc/search.md).

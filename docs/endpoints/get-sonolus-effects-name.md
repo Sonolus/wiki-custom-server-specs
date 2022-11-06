@@ -4,15 +4,15 @@
 
 ## Query Parameters
 
-| Query Parameter | Value    | Description                                             |
-| :-------------- | :------- | :------------------------------------------------------ |
-| `localization`  | `string` | See [`localization`](../query-parameters/localization). |
+| Query Parameter | Value    | Description                                                |
+| :-------------- | :------- | :--------------------------------------------------------- |
+| `localization`  | `string` | See [`localization`](../query-parameters/localization.md). |
 
 ## Response Headers
 
-| Header            | Value    | Description                                                    |
-| :---------------- | :------- | :------------------------------------------------------------- |
-| `Sonolus-Version` | `string` | Optional, see [`Sonolus-Version`](../headers/sonolus-version). |
+| Header            | Value    | Description                                                       |
+| :---------------- | :------- | :---------------------------------------------------------------- |
+| `Sonolus-Version` | `string` | Optional, see [`Sonolus-Version`](../headers/sonolus-version.md). |
 
 ## Response Body
 
