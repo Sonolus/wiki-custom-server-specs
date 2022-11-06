@@ -87,7 +87,7 @@ An AES-CBC-256 encryption IV associated with this session.
 
 Session expiration time, in Unix timestamp in milliseconds.
 
-Once expired, Sonolus app will initiate re-authentication process automatically.
+Session should be short lived, recommended 30 minutes or less. Once expired, Sonolus app will initiate re-authentication process automatically.
 
 ## Examples
 
