@@ -17,7 +17,7 @@ type SessionData = {
 }
 ```
 
-Which is AES-CBC-256 encrypted with key and IV associated with session id specified in [`Sonolus-Session-Id`](./sonolus-session-id.md), and then base64 encoded.
+Which is AES-CBC-256 encrypted with key and IV associated with the session, and then base64 encoded.
 
 ## Examples
 
@@ -29,8 +29,6 @@ Sonolus-Session-Data: ...
 
 [`Sonolus-Session-Id`](./sonolus-session-id.md) must also present.
 
-Session id is the same as returned by [`POST /sonolus/authenticate`](../endpoints/post-sonolus-authenticate.md).
-
-Using session id, server can look up information (key, IV, and expiration) associated with the session. Server must first verify that the session has not expired, then use key and IV to decrypt [`Sonolus-Session-Data`](./sonolus-session-data.md).
+Using session id specified by [`Sonolus-Session-Id`](./sonolus-session-id.md), server can look up information (key, IV, and expiration) associated with the session. Server must first verify that the session has not expired, then use key and IV to decrypt session data.
 
 Once decrypted, server must first verify that `address` is allowed, then allow or reject the request depending on `userProfile`.
