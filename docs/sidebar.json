@@ -22,13 +22,16 @@
             "/endpoints/get-sonolus-backgrounds-name": "GET /sonolus/backgrounds/{name}",
             "/endpoints/get-sonolus-effects-name": "GET /sonolus/effects/{name}",
             "/endpoints/get-sonolus-particles-name": "GET /sonolus/particles/{name}",
-            "/endpoints/get-sonolus-engines-name": "GET /sonolus/engines/{name}"
+            "/endpoints/get-sonolus-engines-name": "GET /sonolus/engines/{name}",
+            "/endpoints/post-sonolus-authenticate": "POST /sonolus/authenticate"
         }
     },
     {
         "title": "Headers",
         "pages": {
-            "/headers/sonolus-version": "Sonolus-Version"
+            "/headers/sonolus-version": "Sonolus-Version",
+            "/headers/sonolus-session-id": "Sonolus-Session-Id",
+            "/headers/sonolus-session-data": "Sonolus-Session-Data"
         }
     },
     {
@@ -42,6 +45,7 @@
     {
         "title": "Misc",
         "pages": {
+            "/misc/deep-links-and-share-links": "Deep Links and Share Links",
             "/misc/resources": "Resources",
             "/misc/srl": "SRL",
             "/misc/search": "Search",
@@ -52,7 +56,8 @@
             "/misc/background-item": "BackgroundItem",
             "/misc/effect-item": "EffectItem",
             "/misc/particle-item": "ParticleItem",
-            "/misc/engine-item": "EngineItem"
+            "/misc/engine-item": "EngineItem",
+            "/misc/user-profile": "UserProfile"
         }
     }
 ]

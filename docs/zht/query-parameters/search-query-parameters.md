@@ -10,4 +10,4 @@
 
 ## 備註
 
-詳見[Search](../misc/search)。
+詳見[Search](../misc/search.md)。

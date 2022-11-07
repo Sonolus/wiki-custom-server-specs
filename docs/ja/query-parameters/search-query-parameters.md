@@ -10,4 +10,4 @@
 
 ## 備考
 
-[Search](../misc/search)を参照してください。
+[Search](../misc/search.md)を参照してください。
