@@ -36,6 +36,8 @@ None.
 
 ```ts
 type ServerInfo = {
+    title: string
+    banner: SRL<'ServerBanner'>
     levels: Section<LevelItem>
     skins: Section<SkinItem>
     backgrounds: Section<BackgroundItem>
@@ -54,6 +56,10 @@ type Section<T> = {
 
 ```json
 {
+    "title": "My Server Title",
+    "banner": {
+        // ...
+    }
     "levels": {
         "items": [
             // ...
