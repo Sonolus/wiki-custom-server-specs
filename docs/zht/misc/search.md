@@ -1,6 +1,6 @@
 # `Search`
 
-`Search`提供了搜尋的設定，並會被Sonolus程式用於填充搜索界面。
+`Search`提供了搜尋的設定，並會被 Sonolus 程式用於填充搜索界面。
 
 ## 語法
 
@@ -30,7 +30,7 @@ type SearchSliderOption = {
     min: number
     max: number
     step: number
-    display: 'number' | 'percentage'
+    unit?: string
 }
 
 type SearchToggleOption = {
@@ -71,8 +71,7 @@ type SearchSelectOption = {
             "def": 0,
             "min": 0,
             "max": 100,
-            "step": 1,
-            "display": "number"
+            "step": 1
         }
     ]
 }
