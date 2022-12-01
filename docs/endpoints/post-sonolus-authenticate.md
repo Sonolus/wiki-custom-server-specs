@@ -77,11 +77,11 @@ Session id.
 
 #### `key`
 
-An AES-CBC-256 encryption key associated with this session.
+A base64 encoded AES-CBC-256 encryption key associated with this session.
 
 #### `iv`
 
-An AES-CBC-256 encryption IV associated with this session.
+A base64 encoded AES-CBC-256 encryption IV associated with this session.
 
 ### `expiration`
 
