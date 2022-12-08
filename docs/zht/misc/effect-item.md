@@ -7,7 +7,7 @@
 ```ts
 type EffectItem = {
     name: string
-    version: 3
+    version: 4
     title: string
     subtitle: string
     author: string
@@ -26,7 +26,7 @@ type EffectItem = {
 ```json
 {
     "name": "bandori-00",
-    "version": 3,
+    "version": 4,
     "title": "SEスキン00",
     "subtitle": "BanG Dream! Girls Band Party!",
     "author": "BanG Dream! Girls Band Party!",

@@ -1,6 +1,6 @@
 # `Search`
 
-`Search`は検索の構成を提供し、Sonolusアプリが検索インターフェースのフォームを構成するために利用されます。
+`Search`は検索の構成を提供し、Sonolus アプリが検索インターフェースのフォームを構成するために利用されます。
 
 ## 構文
 
@@ -30,7 +30,7 @@ type SearchSliderOption = {
     min: number
     max: number
     step: number
-    display: 'number' | 'percentage'
+    unit?: string
 }
 
 type SearchToggleOption = {
@@ -71,14 +71,13 @@ type SearchSelectOption = {
             "def": 0,
             "min": 0,
             "max": 100,
-            "step": 1,
-            "display": "number"
+            "step": 1
         }
     ]
 }
 ```
 
-ユーザーが検索フォームをSubmitすると、次のようなクエリパラメータが送信されます。
+ユーザーが検索フォームを Submit すると、次のようなクエリパラメータが送信されます。
 
 ```url
 ?keywords=expert&minRating=75

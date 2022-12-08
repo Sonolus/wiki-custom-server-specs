@@ -30,7 +30,7 @@ type SearchSliderOption = {
     min: number
     max: number
     step: number
-    display: 'number' | 'percentage'
+    unit?: string
 }
 
 type SearchToggleOption = {
@@ -71,8 +71,7 @@ Name of query parameter used to identify the search option.
             "def": 0,
             "min": 0,
             "max": 100,
-            "step": 1,
-            "display": "number"
+            "step": 1
         }
     ]
 }
