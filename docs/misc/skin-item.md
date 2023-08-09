@@ -7,7 +7,7 @@
 ```ts
 type SkinItem = {
     name: string
-    version: 2
+    version: 3
     title: string
     subtitle: string
     author: string
@@ -26,7 +26,7 @@ Unique name which identifies the skin.
 ```json
 {
     "name": "bandori-n00-f00-l00",
-    "version": 2,
+    "version": 3,
     "title": "TYPE1 / TYPE1 / レーンスキン00",
     "subtitle": "BanG Dream! Girls Band Party!",
     "author": "BanG Dream! Girls Band Party!",

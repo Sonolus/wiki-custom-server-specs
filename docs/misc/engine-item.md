@@ -7,7 +7,7 @@
 ```ts
 type EngineItem = {
     name: string
-    version: 7
+    version: 9
     title: string
     subtitle: string
     author: string
@@ -16,7 +16,8 @@ type EngineItem = {
     effect: EffectItem
     particle: ParticleItem
     thumbnail: SRL<'EngineThumbnail'>
-    data: SRL<'EngineData'>
+    playData: SRL<'EnginePlayData'>
+    tutorialData: SRL<'EngineTutorialData'>
     rom?: SRL<'EngineRom'>
     configuration: SRL<'EngineConfiguration'>
 }
@@ -54,7 +55,10 @@ Default items to use with the engine.
     "thumbnail": {
         // ...
     },
-    "data": {
+    "tutorialData": {
+        // ...
+    },
+    "playData": {
         // ...
     },
     "configuration": {

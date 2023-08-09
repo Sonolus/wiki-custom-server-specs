@@ -7,7 +7,7 @@
 ```ts
 type ParticleItem = {
     name: string
-    version: 1
+    version: 2
     title: string
     subtitle: string
     author: string
@@ -26,7 +26,7 @@ Unique name which identifies the particle.
 ```json
 {
     "name": "bandori-1",
-    "version": 1,
+    "version": 2,
     "title": "Effect Type 1",
     "subtitle": "BanG Dream! Girls Band Party!",
     "author": "Sonolus",
