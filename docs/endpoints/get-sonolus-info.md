@@ -10,10 +10,9 @@
 
 ## Request Headers
 
-| Header                 | Value    | Description                                                                 |
-| :--------------------- | :------- | :-------------------------------------------------------------------------- |
-| `Sonolus-Session-Id`   | `string` | Optional, see [`Sonolus-Session-Id`](../headers/sonolus-session-id.md).     |
-| `Sonolus-Session-Data` | `string` | Optional, see [`Sonolus-Session-Data`](../headers/sonolus-session-data.md). |
+| Header            | Value    | Description                                                       |
+| :---------------- | :------- | :---------------------------------------------------------------- |
+| `Sonolus-Session` | `string` | Optional, see [`Sonolus-Session`](../headers/sonolus-session.md). |
 
 ## Request Body
 
@@ -37,18 +36,10 @@ None.
 ```ts
 type ServerInfo = {
     title: string
-    banner: SRL<'ServerBanner'>
-    levels: Section<LevelItem>
-    skins: Section<SkinItem>
-    backgrounds: Section<BackgroundItem>
-    effects: Section<EffectItem>
-    particles: Section<ParticleItem>
-    engines: Section<EngineItem>
-}
-
-type Section<T> = {
-    items: T[]
-    search: Search
+    description?: string
+    hasAuthentication: boolean
+    hasMultiplayer: boolean
+    banner?: SRL
 }
 ```
 
@@ -57,60 +48,10 @@ type Section<T> = {
 ```json
 {
     "title": "My Server Title",
+    "hasAuthentication": false,
+    "hasMultiplayer": true,
     "banner": {
         // ...
     }
-    "levels": {
-        "items": [
-            // ...
-        ],
-        "search": {
-            // ...
-        }
-    },
-    "skins": {
-        "items": [
-            // ...
-        ],
-        "search": {
-            // ...
-        }
-    },
-    "backgrounds": {
-        "items": [
-            // ...
-        ],
-        "search": {
-            // ...
-        }
-    },
-    "effects": {
-        "items": [
-            // ...
-        ],
-        "search": {
-            // ...
-        }
-    },
-    "particles": {
-        "items": [
-            // ...
-        ],
-        "search": {
-            // ...
-        }
-    },
-    "engines": {
-        "items": [
-            // ...
-        ],
-        "search": {
-            // ...
-        }
-    }
 }
 ```
-
-## Remarks
-
-It is recommended to keep each category short by showing only 5 entries.

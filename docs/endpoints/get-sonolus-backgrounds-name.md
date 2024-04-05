@@ -10,10 +10,9 @@
 
 ## Request Headers
 
-| Header                 | Value    | Description                                                                 |
-| :--------------------- | :------- | :-------------------------------------------------------------------------- |
-| `Sonolus-Session-Id`   | `string` | Optional, see [`Sonolus-Session-Id`](../headers/sonolus-session-id.md).     |
-| `Sonolus-Session-Data` | `string` | Optional, see [`Sonolus-Session-Data`](../headers/sonolus-session-data.md). |
+| Header            | Value    | Description                                                       |
+| :---------------- | :------- | :---------------------------------------------------------------- |
+| `Sonolus-Session` | `string` | Optional, see [`Sonolus-Session`](../headers/sonolus-session.md). |
 
 ## Request Body
 
@@ -47,7 +46,7 @@ type BackgroundDetails = ItemDetails<BackgroundItem>
         // ...
     },
     "description": "Description of the background",
-    "recommended": [
+    "sections": [
         // ...
     ]
 }

@@ -7,31 +7,43 @@
 ```ts
 type LevelItem = {
     name: string
+    source?: string
     version: 1
     rating: number
     title: string
     artists: string
     author: string
+    tags: Tag[]
     engine: EngineItem
     useSkin: UseItem<SkinItem>
     useBackground: UseItem<BackgroundItem>
     useEffect: UseItem<EffectItem>
     useParticle: UseItem<ParticleItem>
-    cover: SRL<'LevelCover'>
-    bgm: SRL<'LevelBgm'>
-    preview?: SRL<'LevelPreview'>
-    data: SRL<'LevelData'>
+    cover: SRL
+    bgm: SRL
+    preview?: SRL
+    data: SRL
 }
 
-type UseItem<T> = {
-    useDefault: boolean
-    item?: T
-}
+type UseItem<T> =
+    | {
+          useDefault: true
+      }
+    | {
+          useDefault: false
+          item: T
+      }
 ```
 
 ### `name`
 
 Unique name which identifies the level.
+
+### `source`
+
+Address of the source server.
+
+Providing a source allows Sonolus to update the item in collection and use the item in multiplayer.
 
 ### `UseItem<T>`
 
@@ -49,6 +61,9 @@ Otherwise, `item` is used.
     "title": "Yes! BanG_Dream!",
     "artists": "Poppin'Party",
     "author": "BanG Dream! Girls Band Party!",
+    "tags": [
+        // ...
+    ],
     "engine": {
         // ...
     },

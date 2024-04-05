@@ -1,28 +1,27 @@
-# `BackgroundItem`
+# `ReplayItem`
 
-`BackgroundItem` provides information of a background.
+`ReplayItem` provides information of a replay.
 
 ## Syntax
 
 ```ts
-type BackgroundItem = {
+type ReplayItem = {
     name: string
     source?: string
-    version: 2
+    version: 1
     title: string
     subtitle: string
     author: string
     tags: Tag[]
-    thumbnail: SRL
+    level: LevelItem
     data: SRL
-    image: SRL
     configuration: SRL
 }
 ```
 
 ### `name`
 
-Unique name which identifies the background.
+Unique name which identifies the replay.
 
 ### `source`
 
@@ -34,21 +33,18 @@ Providing a source allows Sonolus to update the item in collection and use the i
 
 ```json
 {
-    "name": "bandori-live-00",
-    "version": 2,
-    "title": "デフォルト背景",
-    "subtitle": "BanG Dream! Girls Band Party!",
-    "author": "BanG Dream! Girls Band Party!",
+    "name": "...",
+    "version": 1,
+    "title": "FC / 987654321",
+    "subtitle": "432 / 1 / 0 / 0",
+    "author": "Player#0000",
     "tags": [
         // ...
     ],
-    "thumbnail": {
+    "level": {
         // ...
     },
     "data": {
-        // ...
-    },
-    "image": {
         // ...
     },
     "configuration": {

@@ -1,12 +1,14 @@
-# `GET /sonolus/engines/{name}`
+# `GET /sonolus/playlists/list`
 
-`/sonolus/engines/{name}` provides detailed information of engine of name `{name}`, and is used by Sonolus app to populate server engine details view.
+`/sonolus/playlists/list` provides information of playlists, and is used by Sonolus app to populate server playlist list view.
 
 ## Query Parameters
 
-| Query Parameter | Value    | Description                                                |
-| :-------------- | :------- | :--------------------------------------------------------- |
-| `localization`  | `string` | See [`localization`](../query-parameters/localization.md). |
+| Query Parameter   | Value    | Description                                                                      |
+| :---------------- | :------- | :------------------------------------------------------------------------------- |
+| `localization`    | `string` | See [`localization`](../query-parameters/localization.md).                       |
+| `page`            | `number` | See [`page`](../query-parameters/page.md).                                       |
+| Search Parameters | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md). |
 
 ## Request Headers
 
@@ -24,7 +26,6 @@ None.
 | :----------------- | :---------------------------------- |
 | `200 OK`           |                                     |
 | `401 Unauthorized` | Authentication required or expired. |
-| `404 Not Found`    |                                     |
 
 ## Response Headers
 
@@ -35,19 +36,23 @@ None.
 ## Response Body
 
 ```ts
-type EngineDetails = ItemDetails<EngineItem>
+type PlaylistList = ItemList<PlaylistItem>
 ```
 
 ## Examples
 
 ```json
 {
-    "item": {
+    "pageCount": 5,
+    "items": [
         // ...
-    },
-    "description": "Description of the engine",
-    "sections": [
+    ],
+    "searches": [
         // ...
     ]
 }
 ```
+
+## Remarks
+
+When using quick search, search parameters of `?type=quick&keywords=...` will be sent.
