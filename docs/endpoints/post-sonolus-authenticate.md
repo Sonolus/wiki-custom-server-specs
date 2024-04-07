@@ -8,18 +8,39 @@ None.
 
 ## Request Headers
 
-None.
+| Header              | Value    | Description                                                 |
+| :------------------ | :------- | :---------------------------------------------------------- |
+| `Sonolus-Signature` | `string` | See [`Sonolus-Signature`](../headers/sonolus-signature.md). |
 
 ## Request Body
 
-None.
+```ts
+type AuthenticateServerRequest = {
+    type: 'authenticateServer'
+    address: string
+    time: number
+    userProfile: UserProfile
+}
+```
+
+### `type`
+
+Server should verify that `type` equals to `'authenticateServer'`.
+
+### `address`
+
+Server should verify that `address` matches server address.
+
+### `time`
+
+Server should verify that `time` is recent.
 
 ## Response Code
 
-| Code            | Description                                   |
-| :-------------- | :-------------------------------------------- |
-| `200 OK`        |                                               |
-| `404 Not Found` | Authentication not supported or not required. |
+| Code               | Description              |
+| :----------------- | :----------------------- |
+| `200 OK`           |                          |
+| `401 Unauthorized` | Authentication rejected. |
 
 ## Response Headers
 
@@ -30,58 +51,15 @@ None.
 ## Response Body
 
 ```ts
-type AuthenticateInfo = {
-    address: string
+type AuthenticateServerResponse = {
     session: string
     expiration: number
 }
 ```
 
-### `address`
-
-Sonolus app will verify if `address` matches server address in app for security.
-
 ### `session`
 
-Session information, contains:
-
-```ts
-type SessionInfo = {
-    id: string
-    key: string
-    iv: string
-}
-```
-
-Which is RSA-OAEP-SHA1 encrypted with Sonolus encryption public key:
-
-```
------BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8DDWNplPkFiQI2QywLOT
-OLAsIA+H0kc9RjFK4pJV6MKJxvhAGsJ8uA18Wsug4YU7Kp93gV3Zv7/RlV0yMkWv
-CxhsQO/K9NI5MdyJSxTI7UcVukZDAQbiFBT+/1od28XKhn6eO2PqI3E7uXpN44Cd
-O7rgtLSYBBT1/+Aw/gJHn+u5fo60xusfPEYYpXNnIHEL52niNW52wmk/LGItZDlJ
-+oSwZH2qRFol6t63ymzFUNbred0DwJD+RmqWEq/J/57ofCaL65148BmD2KkJoA8k
-MR4hNOP9cYs7iQQguboCa0SsJPl4V2SOG+Mn6IkSkZJRfYkC3SXdjmxf+i4qA801
-RQIDAQAB
------END PUBLIC KEY-----
-```
-
-And then base64 encoded.
-
-Session information should be created freshly with each authentication request, cryptographically random, and stored for session verification later.
-
-#### `id`
-
-Session id.
-
-#### `key`
-
-A base64 encoded AES-CBC-256 encryption key associated with this session.
-
-#### `iv`
-
-A base64 encoded AES-CBC-256 encryption IV associated with this session.
+Server defined session information.
 
 ### `expiration`
 
@@ -93,8 +71,11 @@ Session should be short lived, recommended 30 minutes or less. Once expired, Son
 
 ```json
 {
-    "address": "https://...",
     "session": "...",
     "expiration": 1640995200000
 }
 ```
+
+## Remarks
+
+Server should verify that request body is authentic using `Sonolus-Signature` request header.

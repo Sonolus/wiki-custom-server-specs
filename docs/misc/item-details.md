@@ -8,7 +8,7 @@
 type ItemDetails<T> = {
     item: T
     description: string
-    recommended: T[]
+    sections: ItemSection<T>[]
 }
 ```
 
@@ -20,7 +20,7 @@ type ItemDetails<T> = {
         // ...
     },
     "description": "Description of the item",
-    "recommended": [
+    "sections": [
         // ...
     ]
 }

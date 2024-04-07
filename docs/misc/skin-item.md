@@ -7,19 +7,27 @@
 ```ts
 type SkinItem = {
     name: string
+    source?: string
     version: 4
     title: string
     subtitle: string
     author: string
-    thumbnail: SRL<'SkinThumbnail'>
-    data: SRL<'SkinData'>
-    texture: SRL<'SkinTexture'>
+    tags: Tag[]
+    thumbnail: SRL
+    data: SRL
+    texture: SRL
 }
 ```
 
 ### `name`
 
 Unique name which identifies the skin.
+
+### `source`
+
+Address of the source server.
+
+Providing a source allows Sonolus to update the item in collection and use the item in multiplayer.
 
 ## Examples
 
@@ -30,6 +38,9 @@ Unique name which identifies the skin.
     "title": "TYPE1 / TYPE1 / レーンスキン00",
     "subtitle": "BanG Dream! Girls Band Party!",
     "author": "BanG Dream! Girls Band Party!",
+    "tags": [
+        // ...
+    ],
     "thumbnail": {
         // ...
     },

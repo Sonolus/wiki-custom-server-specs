@@ -1,6 +1,6 @@
-# `GET /sonolus/engines/{name}`
+# `GET /sonolus/posts/info`
 
-`/sonolus/engines/{name}` provides detailed information of engine of name `{name}`, and is used by Sonolus app to populate server engine details view.
+`/sonolus/posts/info` provides information of posts, and is used by Sonolus app to populate server post info view.
 
 ## Query Parameters
 
@@ -24,7 +24,6 @@ None.
 | :----------------- | :---------------------------------- |
 | `200 OK`           |                                     |
 | `401 Unauthorized` | Authentication required or expired. |
-| `404 Not Found`    |                                     |
 
 ## Response Headers
 
@@ -35,19 +34,21 @@ None.
 ## Response Body
 
 ```ts
-type EngineDetails = ItemDetails<EngineItem>
+type PostInfo = ItemInfo<PostItem>
 ```
 
 ## Examples
 
 ```json
 {
-    "item": {
+    "searches": [
         // ...
-    },
-    "description": "Description of the engine",
+    ],
     "sections": [
         // ...
-    ]
+    ],
+    "banner": {
+        // ...
+    }
 }
 ```

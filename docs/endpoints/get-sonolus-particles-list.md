@@ -4,18 +4,17 @@
 
 ## Query Parameters
 
-| Query Parameter         | Value    | Description                                                                    |
-| :---------------------- | :------- | :----------------------------------------------------------------------------- |
-| `localization`          | `string` | See [`localization`](../query-parameters/localization.md).                     |
-| `page`                  | `number` | See [`page`](../query-parameters/page.md).                                     |
-| Search Query Parameters | `any`    | See [Search Query Parameters](../query-parameters/search-query-parameters.md). |
+| Query Parameter   | Value    | Description                                                                      |
+| :---------------- | :------- | :------------------------------------------------------------------------------- |
+| `localization`    | `string` | See [`localization`](../query-parameters/localization.md).                       |
+| `page`            | `number` | See [`page`](../query-parameters/page.md).                                       |
+| Search Parameters | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md). |
 
 ## Request Headers
 
-| Header                 | Value    | Description                                                                 |
-| :--------------------- | :------- | :-------------------------------------------------------------------------- |
-| `Sonolus-Session-Id`   | `string` | Optional, see [`Sonolus-Session-Id`](../headers/sonolus-session-id.md).     |
-| `Sonolus-Session-Data` | `string` | Optional, see [`Sonolus-Session-Data`](../headers/sonolus-session-data.md). |
+| Header            | Value    | Description                                                       |
+| :---------------- | :------- | :---------------------------------------------------------------- |
+| `Sonolus-Session` | `string` | Optional, see [`Sonolus-Session`](../headers/sonolus-session.md). |
 
 ## Request Body
 
@@ -48,8 +47,12 @@ type ParticleList = ItemList<ParticleItem>
     "items": [
         // ...
     ],
-    "search": {
-        //...
-    }
+    "searches": [
+        // ...
+    ]
 }
 ```
+
+## Remarks
+
+When using quick search, search parameters of `?type=quick&keywords=...` will be sent.

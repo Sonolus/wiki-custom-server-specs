@@ -11,13 +11,32 @@
         "title": "Endpoints",
         "pages": {
             "/endpoints/get-sonolus-info": "GET /sonolus/info",
+            "/endpoints/get-sonolus-rooms-info": "GET /sonolus/rooms/info",
+            "/endpoints/get-sonolus-posts-info": "GET /sonolus/posts/info",
+            "/endpoints/get-sonolus-playlists-info": "GET /sonolus/playlists/info",
+            "/endpoints/get-sonolus-levels-info": "GET /sonolus/levels/info",
+            "/endpoints/get-sonolus-replays-info": "GET /sonolus/replays/info",
+            "/endpoints/get-sonolus-skins-info": "GET /sonolus/skins/info",
+            "/endpoints/get-sonolus-backgrounds-info": "GET /sonolus/backgrounds/info",
+            "/endpoints/get-sonolus-effects-info": "GET /sonolus/effects/info",
+            "/endpoints/get-sonolus-particles-info": "GET /sonolus/particles/info",
+            "/endpoints/get-sonolus-engines-info": "GET /sonolus/engines/info",
+            "/endpoints/get-sonolus-rooms-list": "GET /sonolus/rooms/list",
+            "/endpoints/get-sonolus-posts-list": "GET /sonolus/posts/list",
+            "/endpoints/get-sonolus-playlists-list": "GET /sonolus/playlists/list",
             "/endpoints/get-sonolus-levels-list": "GET /sonolus/levels/list",
+            "/endpoints/get-sonolus-replays-list": "GET /sonolus/replays/list",
             "/endpoints/get-sonolus-skins-list": "GET /sonolus/skins/list",
             "/endpoints/get-sonolus-backgrounds-list": "GET /sonolus/backgrounds/list",
             "/endpoints/get-sonolus-effects-list": "GET /sonolus/effects/list",
             "/endpoints/get-sonolus-particles-list": "GET /sonolus/particles/list",
             "/endpoints/get-sonolus-engines-list": "GET /sonolus/engines/list",
+            "/endpoints/post-sonolus-rooms-create": "POST /sonolus/rooms/create",
+            "/endpoints/post-sonolus-rooms-name": "POST /sonolus/rooms/{name}",
+            "/endpoints/get-sonolus-posts-name": "GET /sonolus/posts/{name}",
+            "/endpoints/get-sonolus-playlists-name": "GET /sonolus/playlists/{name}",
             "/endpoints/get-sonolus-levels-name": "GET /sonolus/levels/{name}",
+            "/endpoints/get-sonolus-replays-name": "GET /sonolus/replays/{name}",
             "/endpoints/get-sonolus-skins-name": "GET /sonolus/skins/{name}",
             "/endpoints/get-sonolus-backgrounds-name": "GET /sonolus/backgrounds/{name}",
             "/endpoints/get-sonolus-effects-name": "GET /sonolus/effects/{name}",
@@ -30,8 +49,8 @@
         "title": "Headers",
         "pages": {
             "/headers/sonolus-version": "Sonolus-Version",
-            "/headers/sonolus-session-id": "Sonolus-Session-Id",
-            "/headers/sonolus-session-data": "Sonolus-Session-Data"
+            "/headers/sonolus-session": "Sonolus-Session",
+            "/headers/sonolus-signature": "Sonolus-Signature"
         }
     },
     {
@@ -39,19 +58,26 @@
         "pages": {
             "/query-parameters/localization": "localization",
             "/query-parameters/page": "page",
-            "/query-parameters/search-query-parameters": "Search Query Parameters"
+            "/query-parameters/options-query-parameters": "Options Query Parameters"
         }
     },
     {
         "title": "Misc",
         "pages": {
             "/misc/deep-links-and-share-links": "Deep Links and Share Links",
+            "/misc/external-authentication": "External Authentication",
             "/misc/resources": "Resources",
             "/misc/srl": "SRL",
-            "/misc/search": "Search",
+            "/misc/server-options-section": "ServerOptionsSection",
+            "/misc/item-section": "ItemSection",
+            "/misc/item-info": "ItemInfo",
             "/misc/item-list": "ItemList",
             "/misc/item-details": "ItemDetails",
+            "/misc/room-item": "RoomItem",
+            "/misc/post-item": "PostItem",
+            "/misc/playlist-item": "PlaylistItem",
             "/misc/level-item": "LevelItem",
+            "/misc/replay-item": "ReplayItem",
             "/misc/skin-item": "SkinItem",
             "/misc/background-item": "BackgroundItem",
             "/misc/effect-item": "EffectItem",

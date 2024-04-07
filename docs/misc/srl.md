@@ -5,39 +5,11 @@
 ## Syntax
 
 ```ts
-type SRL<T extends ResourceType> = {
-    type: T
+type SRL = {
     hash: string
     url: string
 }
-
-type ResourceType =
-    | 'LevelCover'
-    | 'LevelBgm'
-    | 'LevelPreview'
-    | 'LevelData'
-    | 'SkinThumbnail'
-    | 'SkinData'
-    | 'SkinTexture'
-    | 'BackgroundThumbnail'
-    | 'BackgroundData'
-    | 'BackgroundImage'
-    | 'BackgroundConfiguration'
-    | 'EffectThumbnail'
-    | 'EffectData'
-    | 'EffectAudio'
-    | 'ParticleThumbnail'
-    | 'ParticleData'
-    | 'ParticleTexture'
-    | 'EngineThumbnail'
-    | 'EngineData'
-    | 'EngineRom'
-    | 'EngineConfiguration'
 ```
-
-### `type`
-
-Type of the resource.
 
 ### `hash`
 
@@ -55,9 +27,8 @@ If a relative URL (a URL starting with `/`) is used, it is relative to the serve
 
 ```json
 {
-    "type": "LevelCover",
     "hash": "...",
-    "url": "https://..."
+    "url": "https:// ..."
 }
 ```
 

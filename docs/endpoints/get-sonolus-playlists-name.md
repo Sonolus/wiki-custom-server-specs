@@ -1,6 +1,6 @@
-# `GET /sonolus/engines/{name}`
+# `GET /sonolus/playlists/{name}`
 
-`/sonolus/engines/{name}` provides detailed information of engine of name `{name}`, and is used by Sonolus app to populate server engine details view.
+`/sonolus/playlists/{name}` provides detailed information of playlist of name `{name}`, and is used by Sonolus app to populate server playlist details view.
 
 ## Query Parameters
 
@@ -35,7 +35,7 @@ None.
 ## Response Body
 
 ```ts
-type EngineDetails = ItemDetails<EngineItem>
+type PlaylistDetails = ItemDetails<PlaylistItem>
 ```
 
 ## Examples
@@ -45,7 +45,7 @@ type EngineDetails = ItemDetails<EngineItem>
     "item": {
         // ...
     },
-    "description": "Description of the engine",
+    "description": "Description of the playlist",
     "sections": [
         // ...
     ]

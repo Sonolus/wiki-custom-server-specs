@@ -7,26 +7,35 @@
 ```ts
 type EngineItem = {
     name: string
-    version: 10
+    source?: string
+    version: 12
     title: string
     subtitle: string
     author: string
+    tags: Tag[]
     skin: SkinItem
     background: BackgroundItem
     effect: EffectItem
     particle: ParticleItem
-    thumbnail: SRL<'EngineThumbnail'>
-    playData: SRL<'EnginePlayData'>
-    previewData: SRL<'EnginePreviewData'>
-    tutorialData: SRL<'EngineTutorialData'>
-    rom?: SRL<'EngineRom'>
-    configuration: SRL<'EngineConfiguration'>
+    thumbnail: SRL
+    playData: SRL
+    watchData: SRL
+    previewData: SRL
+    tutorialData: SRL
+    rom?: SRL
+    configuration: SRL
 }
 ```
 
 ### `name`
 
 Unique name which identifies the engine.
+
+### `source`
+
+Address of the source server.
+
+Providing a source allows Sonolus to update the item in collection and use the item in multiplayer.
 
 ### `skin` / `background` / `effect` / `particle`
 
@@ -37,10 +46,13 @@ Default items to use with the engine.
 ```json
 {
     "name": "bandori",
-    "version": 10,
+    "version": 12,
     "title": "BanG Dream!",
     "subtitle": "BanG Dream! Girls Band Party!",
     "author": "Burrito",
+    "tags": [
+        // ...
+    ],
     "skin": {
         // ...
     },

@@ -11,7 +11,7 @@ Sonolus-Version: <value>
 ## Examples
 
 ```http
-Sonolus-Version: 0.5.0
+Sonolus-Version: 0.8.0
 ```
 
 ## Remarks

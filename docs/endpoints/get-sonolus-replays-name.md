@@ -1,6 +1,6 @@
-# `GET /sonolus/engines/{name}`
+# `GET /sonolus/replays/{name}`
 
-`/sonolus/engines/{name}` provides detailed information of engine of name `{name}`, and is used by Sonolus app to populate server engine details view.
+`/sonolus/replays/{name}` provides detailed information of replay of name `{name}`, and is used by Sonolus app to populate server replay details view.
 
 ## Query Parameters
 
@@ -35,7 +35,7 @@ None.
 ## Response Body
 
 ```ts
-type EngineDetails = ItemDetails<EngineItem>
+type ReplayDetails = ItemDetails<ReplayItem>
 ```
 
 ## Examples
@@ -45,7 +45,7 @@ type EngineDetails = ItemDetails<EngineItem>
     "item": {
         // ...
     },
-    "description": "Description of the engine",
+    "description": "Description of the replay",
     "sections": [
         // ...
     ]

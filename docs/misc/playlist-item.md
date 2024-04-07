@@ -1,27 +1,26 @@
-# `EffectItem`
+# `PlaylistItem`
 
-`EffectItem` provides information of a effect.
+`PlaylistItem` provides information of a playlist.
 
 ## Syntax
 
 ```ts
-type EffectItem = {
+type PlaylistItem = {
     name: string
     source?: string
-    version: 5
+    version: 1
     title: string
     subtitle: string
     author: string
     tags: Tag[]
-    thumbnail: SRL
-    data: SRL
-    audio: SRL
+    levels: LevelItem[]
+    thumbnail?: SRL
 }
 ```
 
 ### `name`
 
-Unique name which identifies the effect.
+Unique name which identifies the playlist.
 
 ### `source`
 
@@ -33,21 +32,18 @@ Providing a source allows Sonolus to update the item in collection and use the i
 
 ```json
 {
-    "name": "bandori-00",
-    "version": 5,
-    "title": "SEスキン00",
-    "subtitle": "BanG Dream! Girls Band Party!",
+    "name": "bandori-1-expert",
+    "version": 1,
+    "title": "Yes! BanG_Dream!",
+    "subtitle": "Poppin'Party",
     "author": "BanG Dream! Girls Band Party!",
     "tags": [
         // ...
     ],
+    "levels": [
+        // ...
+    ],
     "thumbnail": {
-        // ...
-    },
-    "data": {
-        // ...
-    },
-    "audio": {
         // ...
     }
 }

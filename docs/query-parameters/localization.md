@@ -18,4 +18,4 @@
 
 To provide the best player experience, provide localized server content depending on locale.
 
-Currently supported Sonolus locales are: `el`, `en`, `es`, `fr`, `id`, `ja`, `ko`, `zhs`, and `zht`.
+Currently supported Sonolus locales are: `el`, `en`, `es`, `fr`, `id`, `it`, `ja`, `ko`, `ru`, `tr`, `zhs`, and `zht`.

@@ -1,27 +1,25 @@
-# `EffectItem`
+# `PostItem`
 
-`EffectItem` provides information of a effect.
+`PostItem` provides information of a post.
 
 ## Syntax
 
 ```ts
-type EffectItem = {
+type PostItem = {
     name: string
     source?: string
-    version: 5
+    version: 1
     title: string
-    subtitle: string
+    time: number
     author: string
     tags: Tag[]
-    thumbnail: SRL
-    data: SRL
-    audio: SRL
+    thumbnail?: SRL
 }
 ```
 
 ### `name`
 
-Unique name which identifies the effect.
+Unique name which identifies the post.
 
 ### `source`
 
@@ -33,21 +31,15 @@ Providing a source allows Sonolus to update the item in collection and use the i
 
 ```json
 {
-    "name": "bandori-00",
-    "version": 5,
-    "title": "SEスキン00",
-    "subtitle": "BanG Dream! Girls Band Party!",
+    "name": "bandori-info",
+    "version": 1,
+    "title": "Bandori Information",
+    "time": 1640995200000,
     "author": "BanG Dream! Girls Band Party!",
     "tags": [
         // ...
     ],
     "thumbnail": {
-        // ...
-    },
-    "data": {
-        // ...
-    },
-    "audio": {
         // ...
     }
 }

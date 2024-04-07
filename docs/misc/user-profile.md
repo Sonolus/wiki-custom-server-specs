@@ -30,9 +30,9 @@ type UserProfile = {
     "socialLinks": [
         {
             "title": "Link",
-            "address": "https://..."
+            "address": "https:// ..."
         }
     ],
-    "favorites": ["sonolus://..."]
+    "favorites": ["sonolus:// ..."]
 }
 ```

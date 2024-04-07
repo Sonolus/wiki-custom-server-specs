@@ -5,10 +5,10 @@
 ## Syntax
 
 ```ts
-type type ItemList<T> = {
+type ItemList<T> = {
     pageCount: number
     items: T[]
-    search: Search
+    searches?: ServerOptionsSection[]
 }
 ```
 
@@ -24,9 +24,9 @@ If `-1` is used, the list is treated as having infinite pagination
     "items": [
         // ...
     ],
-    "search": {
-        //...
-    }
+    "searches": [
+        // ...
+    ]
 }
 ```
 
