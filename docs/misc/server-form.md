@@ -1,11 +1,11 @@
-# `ServerOptionsSection`
+# `ServerForm`
 
-`ServerOptionsSection` provides a section of options, and is used by Sonolus app to populate various interfaces such as search.
+`ServerForm` provides a form, and is used by Sonolus app to populate various interfaces such as search.
 
 ## Syntax
 
 ```ts
-type ServerOptionsSection = {
+type ServerForm = {
     type: string
     title: Text | (string & {})
     icon?: Icon
@@ -14,6 +14,7 @@ type ServerOptionsSection = {
 
 type ServerOption =
     | ServerTextOption
+    | ServerTextAreaOption
     | ServerSliderOption
     | ServerToggleOption
     | ServerSelectOption
@@ -24,6 +25,15 @@ type ServerTextOption = {
     name: Text | (string & {})
     type: 'text'
     placeholder: Text | (string & {})
+    limit?: number
+}
+
+type ServerTextAreaOption = {
+    query: string
+    name: Text | (string & {})
+    type: 'textArea'
+    placeholder: Text | (string & {})
+    limit?: number
 }
 
 type ServerSliderOption = {

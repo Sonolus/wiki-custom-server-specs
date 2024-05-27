@@ -1,6 +1,6 @@
-# `POST /sonolus/rooms/create`
+# `POST /sonolus/backgrounds/{name}/community`
 
-`/sonolus/rooms/create` allows Sonolus app to create a room.
+`/sonolus/backgrounds/{name}/community` allows Sonolus app to submit community actions to a background.
 
 ## Query Parameters
 
@@ -17,8 +17,16 @@
 ## Request Body
 
 ```ts
-type CreateRoomRequest = {}
+type SubmitItemCommunityActionRequest = {
+    values: string
+}
 ```
+
+### `values`
+
+Query parameters of submitted action.
+
+See [Options Query Parameters](../query-parameters/options-query-parameters.md).
 
 ## Response Code
 
@@ -26,6 +34,7 @@ type CreateRoomRequest = {}
 | :----------------- | :---------------------------------- |
 | `200 OK`           |                                     |
 | `401 Unauthorized` | Authentication required or expired. |
+| `404 Not Found`    |                                     |
 
 ## Response Headers
 
@@ -36,35 +45,25 @@ type CreateRoomRequest = {}
 ## Response Body
 
 ```ts
-type CreateRoomResponse = {
-    name: string
-    key: string
-    creates: ServerForm[]
+type SubmitItemCommunityActionResponse = {
+    shouldUpdateCommunity?: boolean
+    shouldNavigateCommentsToPage?: number
 }
 ```
 
-### `name`
+### `shouldUpdateCommunity`
 
-Name of the room.
+Whether community section should update or not.
 
-### `key`
+### `shouldNavigateCommentsToPage`
 
-Server defined room key.
+Whether comment list should navigate to specified page or not.
 
 ## Examples
 
 ```json
 {
-    "name": "...",
-    "key": "...",
-    "creates": [
-        // ...
-    ]
+    "shouldUpdateCommunity": true,
+    "shouldNavigateCommentsToPage": 5
 }
 ```
-
-## Remarks
-
-Server should create the room immediately and reserve a spot for the room creator, or reserve the room until the room creator has finished creating.
-
-When the room creator has finished creating, client joins the room with `Sonolus-Room-Key` header containing the value of `key`. Server can use the header to verify the client is the room creator, and create/configure the room based on query parameters.

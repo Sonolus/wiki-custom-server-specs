@@ -10,4 +10,4 @@ Options query parameters specifies the parameters based on options.
 
 ## Remarks
 
-See [ServerOptionsSection](../misc/server-options-section.md).
+See [ServerForm](../misc/server-form.md).

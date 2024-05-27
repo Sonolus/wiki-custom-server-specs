@@ -6,7 +6,7 @@
 
 ```ts
 type ItemInfo<T> = {
-    searches?: ServerOptionsSection[]
+    searches?: ServerForm[]
     sections: ItemSection<T>[]
     banner?: SRL
 }

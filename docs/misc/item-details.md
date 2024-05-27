@@ -1,6 +1,6 @@
 # `ItemDetails`
 
-`ItemDetails` provides detailed information of an items, and is used by Sonolus app to populate item details view.
+`ItemDetails` provides detailed information of an item, and is used by Sonolus app to populate item details view.
 
 ## Syntax
 
@@ -8,6 +8,7 @@
 type ItemDetails<T> = {
     item: T
     description: string
+    hasCommunity: boolean
     sections: ItemSection<T>[]
 }
 ```
@@ -20,6 +21,7 @@ type ItemDetails<T> = {
         // ...
     },
     "description": "Description of the item",
+    "hasCommunity": true,
     "sections": [
         // ...
     ]
