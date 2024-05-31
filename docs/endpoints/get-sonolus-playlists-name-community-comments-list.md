@@ -1,12 +1,13 @@
-# `POST /sonolus/rooms/create`
+# `GET /sonolus/playlists/{name}/community/comments/list`
 
-`/sonolus/rooms/create` allows Sonolus app to create a room.
+`/sonolus/playlists/{name}/community/comments/list` provides comments information of a playlist, and is used by Sonolus app to populate server playlist details view's community section's comment list.
 
 ## Query Parameters
 
 | Query Parameter | Value    | Description                                                |
 | :-------------- | :------- | :--------------------------------------------------------- |
 | `localization`  | `string` | See [`localization`](../query-parameters/localization.md). |
+| `page`          | `number` | See [`page`](../query-parameters/page.md).                 |
 
 ## Request Headers
 
@@ -16,9 +17,7 @@
 
 ## Request Body
 
-```ts
-type CreateRoomRequest = {}
-```
+None.
 
 ## Response Code
 
@@ -36,35 +35,16 @@ type CreateRoomRequest = {}
 ## Response Body
 
 ```ts
-type CreateRoomResponse = {
-    name: string
-    key: string
-    creates: ServerForm[]
-}
+type PlaylistCommunityCommentList = ItemCommunityCommentList
 ```
-
-### `name`
-
-Name of the room.
-
-### `key`
-
-Server defined room key.
 
 ## Examples
 
 ```json
 {
-    "name": "...",
-    "key": "...",
-    "creates": [
+    "pageCount": 5,
+    "comments": [
         // ...
     ]
 }
 ```
-
-## Remarks
-
-Server should create the room immediately and reserve a spot for the room creator, or reserve the room until the room creator has finished creating.
-
-When the room creator has finished creating, client joins the room with `Sonolus-Room-Key` header containing the value of `key`. Server can use the header to verify the client is the room creator, and create/configure the room based on query parameters.

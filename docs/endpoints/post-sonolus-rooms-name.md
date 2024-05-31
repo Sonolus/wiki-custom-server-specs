@@ -4,14 +4,16 @@
 
 ## Query Parameters
 
-| Query Parameter   | Value | Description                                                                                |
-| :---------------- | :---- | :----------------------------------------------------------------------------------------- |
-| Create Parameters | `any` | Optional, see [Options Query Parameters](../query-parameters/options-query-parameters.md). |
+| Query Parameter   | Value    | Description                                                                                |
+| :---------------- | :------- | :----------------------------------------------------------------------------------------- |
+| `localization`    | `string` | See [`localization`](../query-parameters/localization.md).                                 |
+| Create Parameters | `any`    | Optional, see [Options Query Parameters](../query-parameters/options-query-parameters.md). |
 
 ## Request Headers
 
 | Header              | Value    | Description                                                                              |
 | :------------------ | :------- | :--------------------------------------------------------------------------------------- |
+| `Sonolus-Session`   | `string` | Optional, see [`Sonolus-Session`](../headers/sonolus-session.md).                        |
 | `Sonolus-Signature` | `string` | See [`Sonolus-Signature`](../headers/sonolus-signature.md).                              |
 | `Sonolus-Room-Key`  | `string` | Optional, see [`POST /sonolus/rooms/create`](../endpoints/post-sonolus-rooms-create.md). |
 
@@ -45,6 +47,7 @@ Server should verify that `time` is recent.
 | :----------------- | :---------------------------------- |
 | `200 OK`           |                                     |
 | `401 Unauthorized` | Authentication required or expired. |
+| `404 Not Found`    |                                     |
 
 ## Response Headers
 

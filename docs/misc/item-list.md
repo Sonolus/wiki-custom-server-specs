@@ -8,13 +8,13 @@
 type ItemList<T> = {
     pageCount: number
     items: T[]
-    searches?: ServerOptionsSection[]
+    searches?: ServerForm[]
 }
 ```
 
 ### `pageCount`
 
-If `-1` is used, the list is treated as having infinite pagination
+If `-1` is used, the list is treated as having infinite pagination.
 
 ## Examples
 

@@ -4,7 +4,9 @@
 
 ## Query Parameters
 
-None.
+| Query Parameter | Value    | Description                                                |
+| :-------------- | :------- | :--------------------------------------------------------- |
+| `localization`  | `string` | See [`localization`](../query-parameters/localization.md). |
 
 ## Request Headers
 
