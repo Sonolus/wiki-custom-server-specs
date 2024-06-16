@@ -1,6 +1,12 @@
-# `GET /sonolus/skins/{name}/community`
+# `POST /sonolus/{type}/create`
 
-`/sonolus/skins/{name}/community` provides community information of skin of name `{name}`, and is used by Sonolus app to populate server skin details view's community section.
+`/sonolus/{type}/create` allows Sonolus app to create an item.
+
+## URL Parameters
+
+| URL Parameter | Value    | Description                                                                                              |
+| :------------ | :------- | :------------------------------------------------------------------------------------------------------- |
+| `type`        | `string` | `posts`, `playlists`, `levels`, `skins`, `backgrounds`, `effects`, `particles`, `engines`, or `replays`. |
 
 ## Query Parameters
 
@@ -16,7 +22,17 @@
 
 ## Request Body
 
-None.
+```ts
+type CreateItemRequest = {
+    values: string
+}
+```
+
+### `values`
+
+Query parameters of create.
+
+See [Options Query Parameters](../query-parameters/options-query-parameters.md).
 
 ## Response Code
 
@@ -24,7 +40,6 @@ None.
 | :----------------- | :---------------------------------- |
 | `200 OK`           |                                     |
 | `401 Unauthorized` | Authentication required or expired. |
-| `404 Not Found`    |                                     |
 
 ## Response Headers
 
@@ -35,17 +50,36 @@ None.
 ## Response Body
 
 ```ts
-type SkinCommunity = ItemCommunity
+type CreateItemResponse = {
+    name: string
+    key: string
+    hashes: string[]
+}
 ```
+
+### `name`
+
+Name of the created item.
+
+### `key`
+
+Server defined upload key.
+
+### `hashes`
+
+Hashes of files needed to be uploaded.
+
+Only files specified in request body `values` can be uploaded.
+
+If not empty, files will be uploaded using [`POST /sonolus/{type}/upload`](../endpoints/post-sonolus-type-upload.md).
 
 ## Examples
 
 ```json
 {
-    "actions": [
-        // ...
-    ],
-    "topComments": [
+    "name": "...",
+    "key": "...",
+    "hashes": [
         // ...
     ]
 }

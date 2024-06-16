@@ -8,7 +8,7 @@
 type ServerForm = {
     type: string
     title: Text | (string & {})
-    icon?: Icon
+    icon?: Icon | (string & {})
     options: ServerOption[]
 }
 
@@ -19,10 +19,15 @@ type ServerOption =
     | ServerToggleOption
     | ServerSelectOption
     | ServerMultiOption
+    | ServerServerItemOption
+    | ServerCollectionItemOption
+    | ServerFileOption
 
 type ServerTextOption = {
     query: string
     name: Text | (string & {})
+    description?: string
+    required?: boolean
     type: 'text'
     placeholder: Text | (string & {})
     limit?: number
@@ -31,6 +36,8 @@ type ServerTextOption = {
 type ServerTextAreaOption = {
     query: string
     name: Text | (string & {})
+    description?: string
+    required?: boolean
     type: 'textArea'
     placeholder: Text | (string & {})
     limit?: number
@@ -39,6 +46,8 @@ type ServerTextAreaOption = {
 type ServerSliderOption = {
     query: string
     name: Text | (string & {})
+    description?: string
+    required?: boolean
     type: 'slider'
     def: number
     min: number
@@ -50,6 +59,8 @@ type ServerSliderOption = {
 type ServerToggleOption = {
     query: string
     name: Text | (string & {})
+    description?: string
+    required?: boolean
     type: 'toggle'
     def: 0 | 1
 }
@@ -57,6 +68,8 @@ type ServerToggleOption = {
 type ServerSelectOption = {
     query: string
     name: Text | (string & {})
+    description?: string
+    required?: boolean
     type: 'select'
     def: number
     values: (Text | (string & {}))[]
@@ -65,15 +78,47 @@ type ServerSelectOption = {
 type ServerMultiOption = {
     query: string
     name: Text | (string & {})
+    description?: string
+    required?: boolean
     type: 'multi'
     defs: boolean[]
     values: (Text | (string & {}))[]
+}
+
+type ServerServerItemOption = {
+    query: string
+    name: Text | (string & {})
+    description?: string
+    required?: boolean
+    type: 'serverItem'
+    itemType: ItemType
+}
+
+type ServerCollectionItemOption = {
+    query: string
+    name: Text | (string & {})
+    description?: string
+    required?: boolean
+    type: 'collectionItem'
+    itemType: ItemType
+}
+
+type ServerFileOption = {
+    query: string
+    name: Text | (string & {})
+    description?: string
+    required?: boolean
+    type: 'file'
 }
 ```
 
 ### `query`
 
 Name of query parameter used to identify the option.
+
+### `required`
+
+If `true`, player is required to modify the value.
 
 ## Examples
 

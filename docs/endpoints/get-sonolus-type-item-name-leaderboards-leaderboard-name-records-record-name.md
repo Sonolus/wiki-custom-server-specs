@@ -1,6 +1,15 @@
-# `GET /sonolus/particles/{name}`
+# `GET /sonolus/{type}/{itemName}/leaderboards/{leaderboardName}/records/{recordName}`
 
-`/sonolus/particles/{name}` provides detailed information of particle of name `{name}`, and is used by Sonolus app to populate server particle details view.
+`/sonolus/{type}/{itemName}/leaderboards/{leaderboardName}/records/{recordName}` provides detailed information of record of `{recordName}` in leaderboard of name `{leaderboardName}` in item of name `{itemName}`, and is used by Sonolus app to populate server item details view's leaderboard section's record's details.
+
+## URL Parameters
+
+| URL Parameter     | Value    | Description                                                                                              |
+| :---------------- | :------- | :------------------------------------------------------------------------------------------------------- |
+| `type`            | `string` | `posts`, `playlists`, `levels`, `skins`, `backgrounds`, `effects`, `particles`, `engines`, or `replays`. |
+| `itemName`        | `string` | Name of item.                                                                                            |
+| `leaderboardName` | `string` | Name of leaderboard.                                                                                     |
+| `recordName`      | `string` | Name of record.                                                                                          |
 
 ## Query Parameters
 
@@ -35,18 +44,16 @@ None.
 ## Response Body
 
 ```ts
-type ParticleDetails = ItemDetails<ParticleItem>
+type ItemLeaderboardRecordDetails = {
+    replays: ReplayItem[]
+}
 ```
 
 ## Examples
 
 ```json
 {
-    "item": {
-        // ...
-    },
-    "description": "Description of the particle",
-    "sections": [
+    "replays": [
         // ...
     ]
 }

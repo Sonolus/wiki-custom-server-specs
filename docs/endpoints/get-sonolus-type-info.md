@@ -1,6 +1,12 @@
-# `GET /sonolus/engines/{name}`
+# `GET /sonolus/{type}/info`
 
-`/sonolus/engines/{name}` provides detailed information of engine of name `{name}`, and is used by Sonolus app to populate server engine details view.
+`/sonolus/{type}/info` provides information of items, and is used by Sonolus app to populate server item info view.
+
+## URL Parameters
+
+| URL Parameter | Value    | Description                                                                                                       |
+| :------------ | :------- | :---------------------------------------------------------------------------------------------------------------- |
+| `type`        | `string` | `posts`, `playlists`, `levels`, `skins`, `backgrounds`, `effects`, `particles`, `engines`, `replays`, or `rooms`. |
 
 ## Query Parameters
 
@@ -24,7 +30,6 @@ None.
 | :----------------- | :---------------------------------- |
 | `200 OK`           |                                     |
 | `401 Unauthorized` | Authentication required or expired. |
-| `404 Not Found`    |                                     |
 
 ## Response Headers
 
@@ -35,19 +40,29 @@ None.
 ## Response Body
 
 ```ts
-type EngineDetails = ItemDetails<EngineItem>
+type ItemInfo<T> = {
+    creates?: ServerForm[]
+    searches?: ServerForm[]
+    sections: ItemSection<T>[]
+    banner?: SRL
+}
 ```
 
 ## Examples
 
 ```json
 {
-    "item": {
+    "creates": [
         // ...
-    },
-    "description": "Description of the engine",
+    ],
+    "searches": [
+        // ...
+    ],
     "sections": [
         // ...
-    ]
+    ],
+    "banner": {
+        // ...
+    }
 }
 ```

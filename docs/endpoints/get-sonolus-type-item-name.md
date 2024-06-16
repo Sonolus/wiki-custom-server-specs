@@ -1,6 +1,13 @@
-# `GET /sonolus/backgrounds/info`
+# `GET /sonolus/{type}/{itemName}`
 
-`/sonolus/backgrounds/info` provides information of backgrounds, and is used by Sonolus app to populate server background info view.
+`/sonolus/{type}/{itemName}` provides detailed information of item of name `{itemName}`, and is used by Sonolus app to populate server item details view.
+
+## URL Parameters
+
+| URL Parameter | Value    | Description                                                                                              |
+| :------------ | :------- | :------------------------------------------------------------------------------------------------------- |
+| `type`        | `string` | `posts`, `playlists`, `levels`, `skins`, `backgrounds`, `effects`, `particles`, `engines`, or `replays`. |
+| `itemName`    | `string` | Name of item.                                                                                            |
 
 ## Query Parameters
 
@@ -24,6 +31,7 @@ None.
 | :----------------- | :---------------------------------- |
 | `200 OK`           |                                     |
 | `401 Unauthorized` | Authentication required or expired. |
+| `404 Not Found`    |                                     |
 
 ## Response Headers
 
@@ -34,21 +42,29 @@ None.
 ## Response Body
 
 ```ts
-type BackgroundInfo = ItemInfo<BackgroundItem>
+type ItemDetails<T> = {
+    item: T
+    description: string
+    hasCommunity: boolean
+    leaderboards: ItemLeaderboard[]
+    sections: ItemSection<T>[]
+}
 ```
 
 ## Examples
 
 ```json
 {
-    "searches": [
+    "item": {
+        // ...
+    },
+    "description": "Description of the item.",
+    "hasCommunity": true,
+    "leaderboards": [
         // ...
     ],
     "sections": [
         // ...
-    ],
-    "banner": {
-        // ...
-    }
+    ]
 }
 ```

@@ -6,6 +6,7 @@
 
 ```ts
 type ItemCommunityComment = {
+    name: string
     author: string
     time: number
     content: string
@@ -17,6 +18,7 @@ type ItemCommunityComment = {
 
 ```json
 {
+    "name": "...",
     "author": "Username",
     "time": 1640995200000,
     "content": "...",

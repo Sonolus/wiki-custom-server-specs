@@ -1,6 +1,14 @@
-# `POST /sonolus/particles/{name}/community`
+# `POST /sonolus/{type}/{itemName}/community/comments/{commentName}/submit`
 
-`/sonolus/particles/{name}/community` allows Sonolus app to submit community actions to a particle.
+`/sonolus/{type}/{itemName}/community/comments/{commentName}/submit` allows Sonolus app to submit community actions to comment of name `{commentName}` in item of name `{itemName}`.
+
+## URL Parameters
+
+| URL Parameter | Value    | Description                                                                                              |
+| :------------ | :------- | :------------------------------------------------------------------------------------------------------- |
+| `type`        | `string` | `posts`, `playlists`, `levels`, `skins`, `backgrounds`, `effects`, `particles`, `engines`, or `replays`. |
+| `itemName`    | `string` | Name of item.                                                                                            |
+| `commentName` | `string` | Name of comment.                                                                                         |
 
 ## Query Parameters
 
