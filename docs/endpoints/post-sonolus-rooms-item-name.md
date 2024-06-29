@@ -1,6 +1,12 @@
-# `POST /sonolus/rooms/{name}`
+# `POST /sonolus/rooms/{itemName}`
 
 `/sonolus/rooms/{name}` allows Sonolus app to join a room.
+
+## URL Parameters
+
+| URL Parameter | Value    | Description   |
+| :------------ | :------- | :------------ |
+| `itemName`    | `string` | Name of room. |
 
 ## Query Parameters
 
@@ -28,6 +34,8 @@ type JoinRoomRequest = {
     userProfile: UserProfile
 }
 ```
+
+Server should verify that request body is authentic using `Sonolus-Signature` request header.
 
 ### `type`
 
@@ -91,8 +99,6 @@ Server defined session information.
 
 ## Remarks
 
-Server should verify that request body is authentic using `Sonolus-Signature` request header.
-
 If a room is being created, create query parameters and `Sonolus-Room-key` header will be available.
 
-If successful, client will join the multiplayer server with `Sonolus-Room-Session` header containing the value of `session`. Server can use it to replay necessary information to multiplayer server.
+If successful, client will join the multiplayer server with `Sonolus-Room-Session` header containing the value of `session`. Server can use it to relay necessary information to multiplayer server.

@@ -25,6 +25,8 @@ type AuthenticateExternalRequest = {
 }
 ```
 
+Server should verify that request body is authentic using `Sonolus-Signature` request header.
+
 ### `type`
 
 Server should verify that `type` equals to `'authenticateExternal'`.
@@ -51,7 +53,3 @@ None.
 ## Response Body
 
 None.
-
-## Remarks
-
-Server should verify that request body is authentic using `Sonolus-Signature` request header.

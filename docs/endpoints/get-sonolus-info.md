@@ -2,6 +2,10 @@
 
 `/sonolus/info` provides information of the server, and is used by Sonolus app to populate server home page.
 
+## URL Parameters
+
+None.
+
 ## Query Parameters
 
 | Query Parameter | Value    | Description                                                |
@@ -37,9 +41,23 @@ None.
 type ServerInfo = {
     title: string
     description?: string
-    hasAuthentication: boolean
-    hasMultiplayer: boolean
+    buttons: ServerInfoButton[]
     banner?: SRL
+}
+
+type ServerInfoButton = {
+    type:
+        | 'authentication'
+        | 'multiplayer'
+        | 'post'
+        | 'playlist'
+        | 'level'
+        | 'replay'
+        | 'skin'
+        | 'background'
+        | 'effect'
+        | 'particle'
+        | 'engine'
 }
 ```
 
@@ -48,8 +66,10 @@ type ServerInfo = {
 ```json
 {
     "title": "My Server Title",
-    "hasAuthentication": false,
-    "hasMultiplayer": true,
+    "description": "Description of my server.",
+    "buttons": [
+        // ...
+    ],
     "banner": {
         // ...
     }

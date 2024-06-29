@@ -1,12 +1,20 @@
-# `GET /sonolus/effects/{name}/community`
+# `GET /sonolus/{type}/{itemName}/community/comments/list`
 
-`/sonolus/effects/{name}/community` provides community information of effect of name `{name}`, and is used by Sonolus app to populate server effect details view's community section.
+`/sonolus/{type}/{itemName}/community/comments/list` provides comments information of item of name `{itemName}`, and is used by Sonolus app to populate server item details view's community section's comment list.
+
+## URL Parameters
+
+| URL Parameter | Value    | Description                                                                                              |
+| :------------ | :------- | :------------------------------------------------------------------------------------------------------- |
+| `type`        | `string` | `posts`, `playlists`, `levels`, `skins`, `backgrounds`, `effects`, `particles`, `engines`, or `replays`. |
+| `itemName`    | `string` | Name of item.                                                                                            |
 
 ## Query Parameters
 
 | Query Parameter | Value    | Description                                                |
 | :-------------- | :------- | :--------------------------------------------------------- |
 | `localization`  | `string` | See [`localization`](../query-parameters/localization.md). |
+| `page`          | `number` | See [`page`](../query-parameters/page.md).                 |
 
 ## Request Headers
 
@@ -35,17 +43,26 @@ None.
 ## Response Body
 
 ```ts
-type EffectCommunity = ItemCommunity
+type ItemCommunityCommentList = {
+    pageCount: number
+    comments: ItemCommunityComment[]
+}
 ```
+
+### `pageCount`
+
+If `-1` is used, the list is treated as having infinite pagination.
+
+### `comments`
+
+It is recommended to keep each page short by showing only 10 comments.
 
 ## Examples
 
 ```json
 {
-    "actions": [
-        // ...
-    ],
-    "topComments": [
+    "pageCount": 5,
+    "comments": [
         // ...
     ]
 }

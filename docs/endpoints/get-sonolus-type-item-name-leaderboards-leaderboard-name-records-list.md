@@ -1,6 +1,14 @@
-# `GET /sonolus/levels/{name}/community/comments/list`
+# `GET /sonolus/{type}/{itemName}/leaderboards/{leaderboardName}/records/list`
 
-`/sonolus/levels/{name}/community/comments/list` provides comments information of a level, and is used by Sonolus app to populate server level details view's community section's comment list.
+`/sonolus/{type}/{itemName}/leaderboards/{leaderboardName}/records/list` provides detailed information of leaderboard of name `{leaderboardName}` in item of name `{itemName}`, and is used by Sonolus app to populate server item details view's leaderboard section's record list.
+
+## URL Parameters
+
+| URL Parameter     | Value    | Description                                                                                              |
+| :---------------- | :------- | :------------------------------------------------------------------------------------------------------- |
+| `type`            | `string` | `posts`, `playlists`, `levels`, `skins`, `backgrounds`, `effects`, `particles`, `engines`, or `replays`. |
+| `itemName`        | `string` | Name of item.                                                                                            |
+| `leaderboardName` | `string` | Name of leaderboard.                                                                                     |
 
 ## Query Parameters
 
@@ -25,6 +33,7 @@ None.
 | :----------------- | :---------------------------------- |
 | `200 OK`           |                                     |
 | `401 Unauthorized` | Authentication required or expired. |
+| `404 Not Found`    |                                     |
 
 ## Response Headers
 
@@ -35,15 +44,26 @@ None.
 ## Response Body
 
 ```ts
-type LevelCommunityCommentList = ItemCommunityCommentList
+type ItemLeaderboardRecordList = {
+    pageCount: number
+    records: ItemLeaderboardRecord[]
+}
 ```
+
+### `pageCount`
+
+If `-1` is used, the list is treated as having infinite pagination.
+
+### `comments`
+
+It is recommended to keep each page short by showing only 10 records.
 
 ## Examples
 
 ```json
 {
     "pageCount": 5,
-    "comments": [
+    "records": [
         // ...
     ]
 }

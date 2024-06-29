@@ -2,6 +2,10 @@
 
 `/sonolus/authenticate` allows Sonolus app to establish an authentication session.
 
+## URL Parameters
+
+None.
+
 ## Query Parameters
 
 | Query Parameter | Value    | Description                                                |
@@ -24,6 +28,8 @@ type AuthenticateServerRequest = {
     userProfile: UserProfile
 }
 ```
+
+Server should verify that request body is authentic using `Sonolus-Signature` request header.
 
 ### `type`
 
@@ -77,7 +83,3 @@ Session should be short lived, recommended 30 minutes or less. Once expired, Son
     "expiration": 1640995200000
 }
 ```
-
-## Remarks
-
-Server should verify that request body is authentic using `Sonolus-Signature` request header.

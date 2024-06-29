@@ -1,6 +1,13 @@
-# `POST /sonolus/playlists/{name}/community`
+# `GET /sonolus/{type}/{itemName}/community/info`
 
-`/sonolus/playlists/{name}/community` allows Sonolus app to submit community actions to a playlist.
+`/sonolus/{type}/{itemName}/community/info` provides community information of item of name `{itemName}`, and is used by Sonolus app to populate server item details view's community section.
+
+## URL Parameters
+
+| URL Parameter | Value    | Description                                                                                              |
+| :------------ | :------- | :------------------------------------------------------------------------------------------------------- |
+| `type`        | `string` | `posts`, `playlists`, `levels`, `skins`, `backgrounds`, `effects`, `particles`, `engines`, or `replays`. |
+| `itemName`    | `string` | Name of item.                                                                                            |
 
 ## Query Parameters
 
@@ -16,17 +23,7 @@
 
 ## Request Body
 
-```ts
-type SubmitItemCommunityActionRequest = {
-    values: string
-}
-```
-
-### `values`
-
-Query parameters of submitted action.
-
-See [Options Query Parameters](../query-parameters/options-query-parameters.md).
+None.
 
 ## Response Code
 
@@ -45,25 +42,21 @@ See [Options Query Parameters](../query-parameters/options-query-parameters.md).
 ## Response Body
 
 ```ts
-type SubmitItemCommunityActionResponse = {
-    shouldUpdateCommunity?: boolean
-    shouldNavigateCommentsToPage?: number
+type ItemCommunity = {
+    actions: ServerForm[]
+    topComments: ItemCommunityComment[]
 }
 ```
-
-### `shouldUpdateCommunity`
-
-Whether community section should update or not.
-
-### `shouldNavigateCommentsToPage`
-
-Whether comment list should navigate to specified page or not.
 
 ## Examples
 
 ```json
 {
-    "shouldUpdateCommunity": true,
-    "shouldNavigateCommentsToPage": 5
+    "actions": [
+        // ...
+    ],
+    "topComments": [
+        // ...
+    ]
 }
 ```

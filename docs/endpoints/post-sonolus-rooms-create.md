@@ -2,6 +2,10 @@
 
 `/sonolus/rooms/create` allows Sonolus app to create a room.
 
+## URL Parameters
+
+None.
+
 ## Query Parameters
 
 | Query Parameter | Value    | Description                                                |
@@ -39,7 +43,6 @@ type CreateRoomRequest = {}
 type CreateRoomResponse = {
     name: string
     key: string
-    creates: ServerForm[]
 }
 ```
 
@@ -56,10 +59,7 @@ Server defined room key.
 ```json
 {
     "name": "...",
-    "key": "...",
-    "creates": [
-        // ...
-    ]
+    "key": "..."
 }
 ```
 

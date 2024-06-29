@@ -1,6 +1,12 @@
-# `GET /sonolus/skins/list`
+# `GET /sonolus/{type}/list`
 
-`/sonolus/skins/list` provides information of skins, and is used by Sonolus app to populate server skin list view.
+`/sonolus/{type}/list` provides information of items, and is used by Sonolus app to populate server item list view.
+
+## URL Parameters
+
+| URL Parameter | Value    | Description                                                                                                       |
+| :------------ | :------- | :---------------------------------------------------------------------------------------------------------------- |
+| `type`        | `string` | `posts`, `playlists`, `levels`, `skins`, `backgrounds`, `effects`, `particles`, `engines`, `replays`, or `rooms`. |
 
 ## Query Parameters
 
@@ -9,6 +15,10 @@
 | `localization`    | `string` | See [`localization`](../query-parameters/localization.md).                       |
 | `page`            | `number` | See [`page`](../query-parameters/page.md).                                       |
 | Search Parameters | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md). |
+
+### Search Parameters
+
+When using quick search, search parameters of `?type=quick&keywords=...` will be sent.
 
 ## Request Headers
 
@@ -36,8 +46,20 @@ None.
 ## Response Body
 
 ```ts
-type SkinList = ItemList<SkinItem>
+type ItemList<T> = {
+    pageCount: number
+    items: T[]
+    searches?: ServerForm[]
+}
 ```
+
+### `pageCount`
+
+If `-1` is used, the list is treated as having infinite pagination.
+
+### `items`
+
+It is recommended to keep each page short by showing only 20 items.
 
 ## Examples
 
@@ -52,7 +74,3 @@ type SkinList = ItemList<SkinItem>
     ]
 }
 ```
-
-## Remarks
-
-When using quick search, search parameters of `?type=quick&keywords=...` will be sent.

@@ -1,6 +1,14 @@
-# `GET /sonolus/particles/{name}/community`
+# `GET /sonolus/{type}/{itemName}/leaderboards/{leaderboardName}`
 
-`/sonolus/particles/{name}/community` provides community information of particle of name `{name}`, and is used by Sonolus app to populate server particle details view's community section.
+`/sonolus/{type}/{itemName}/leaderboards/{leaderboardName}` provides detailed information of leaderboard of name `{leaderboardName}` in item of name `{itemName}`, and is used by Sonolus app to populate server item details view's leaderboard section.
+
+## URL Parameters
+
+| URL Parameter     | Value    | Description                                                                                              |
+| :---------------- | :------- | :------------------------------------------------------------------------------------------------------- |
+| `type`            | `string` | `posts`, `playlists`, `levels`, `skins`, `backgrounds`, `effects`, `particles`, `engines`, or `replays`. |
+| `itemName`        | `string` | Name of item.                                                                                            |
+| `leaderboardName` | `string` | Name of leaderboard.                                                                                     |
 
 ## Query Parameters
 
@@ -35,17 +43,16 @@ None.
 ## Response Body
 
 ```ts
-type ParticleCommunity = ItemCommunity
+type ItemLeaderboardDetails = {
+    topRecords: ItemLeaderboardRecord[]
+}
 ```
 
 ## Examples
 
 ```json
 {
-    "actions": [
-        // ...
-    ],
-    "topComments": [
+    "topRecords": [
         // ...
     ]
 }
