@@ -1,11 +1,11 @@
-# `ItemLeaderboardRecord`
+# `ServerItemLeaderboardRecord`
 
-`ItemLeaderboardRecord` provides information of an item leaderboard record.
+`ServerItemLeaderboardRecord` provides information of an item leaderboard record.
 
 ## Syntax
 
 ```ts
-type ItemLeaderboardRecord = {
+type ServerItemLeaderboardRecord = {
     name: string
     rank: Text | (string & {})
     player: string

@@ -8,9 +8,10 @@ None.
 
 ## Query Parameters
 
-| Query Parameter | Value    | Description                                                |
-| :-------------- | :------- | :--------------------------------------------------------- |
-| `localization`  | `string` | See [`localization`](../query-parameters/localization.md). |
+| Query Parameter       | Value    | Description                                                                      |
+| :-------------------- | :------- | :------------------------------------------------------------------------------- |
+| `localization`        | `string` | See [`localization`](../query-parameters/localization.md).                       |
+| Configuration Options | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md). |
 
 ## Request Headers
 
@@ -42,7 +43,8 @@ type ServerInfo = {
     title: string
     description?: string
     buttons: ServerInfoButton[]
-    banner?: SRL
+    configuration: ServerConfiguration
+    banner?: Srl
 }
 
 type ServerInfoButton = {
@@ -58,8 +60,19 @@ type ServerInfoButton = {
         | 'effect'
         | 'particle'
         | 'engine'
+        | 'configuration'
+}
+
+type ServerConfiguration = {
+    options: ServerOption[]
 }
 ```
+
+### `configuration.options`
+
+Configuration options.
+
+If modified by client, client will attach modified values to every request.
 
 ## Examples
 
@@ -70,6 +83,11 @@ type ServerInfoButton = {
     "buttons": [
         // ...
     ],
+    "configuration": {
+        "options": [
+            // ...
+        ]
+    },
     "banner": {
         // ...
     }

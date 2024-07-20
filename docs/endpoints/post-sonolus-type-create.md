@@ -10,9 +10,10 @@
 
 ## Query Parameters
 
-| Query Parameter | Value    | Description                                                |
-| :-------------- | :------- | :--------------------------------------------------------- |
-| `localization`  | `string` | See [`localization`](../query-parameters/localization.md). |
+| Query Parameter       | Value    | Description                                                                      |
+| :-------------------- | :------- | :------------------------------------------------------------------------------- |
+| `localization`        | `string` | See [`localization`](../query-parameters/localization.md).                       |
+| Configuration Options | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md). |
 
 ## Request Headers
 
@@ -23,7 +24,7 @@
 ## Request Body
 
 ```ts
-type CreateItemRequest = {
+type ServerCreateItemRequest = {
     values: string
 }
 ```
@@ -50,7 +51,7 @@ See [Options Query Parameters](../query-parameters/options-query-parameters.md).
 ## Response Body
 
 ```ts
-type CreateItemResponse = {
+type ServerCreateItemResponse = {
     name: string
     key: string
     hashes: string[]
@@ -71,7 +72,7 @@ Hashes of files needed to be uploaded.
 
 Only files specified in request body `values` can be uploaded.
 
-If not empty, files will be uploaded using [`POST /sonolus/{type}/upload`](../endpoints/post-sonolus-type-upload.md).
+If not empty, files will be uploaded using [`POST /sonolus/{type}/upload`](./post-sonolus-type-upload.md).
 
 ## Examples
 

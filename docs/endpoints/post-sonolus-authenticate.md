@@ -8,9 +8,10 @@ None.
 
 ## Query Parameters
 
-| Query Parameter | Value    | Description                                                |
-| :-------------- | :------- | :--------------------------------------------------------- |
-| `localization`  | `string` | See [`localization`](../query-parameters/localization.md). |
+| Query Parameter       | Value    | Description                                                                      |
+| :-------------------- | :------- | :------------------------------------------------------------------------------- |
+| `localization`        | `string` | See [`localization`](../query-parameters/localization.md).                       |
+| Configuration Options | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md). |
 
 ## Request Headers
 
@@ -21,11 +22,11 @@ None.
 ## Request Body
 
 ```ts
-type AuthenticateServerRequest = {
+type ServerAuthenticateRequest = {
     type: 'authenticateServer'
     address: string
     time: number
-    userProfile: UserProfile
+    userProfile: ServiceUserProfile
 }
 ```
 
@@ -59,7 +60,7 @@ Server should verify that `time` is recent.
 ## Response Body
 
 ```ts
-type AuthenticateServerResponse = {
+type ServerAuthenticateResponse = {
     session: string
     expiration: number
 }

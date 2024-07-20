@@ -1,12 +1,12 @@
-# `UserProfile`
+# `ServiceUserProfile`
 
-`UserProfile` provides information of a user.
+`ServiceUserProfile` provides information of a user.
 
 ## Syntax
 
 ```ts
-type UserProfile = {
-    id: string
+type ServiceUserProfile = {
+    id: ServiceUserId
     handle: string
     name: string
     avatarForegroundColor: string
@@ -32,7 +32,11 @@ type UserProfile = {
             "title": "Link",
             "address": "https:// ..."
         }
+        // ...
     ],
-    "favorites": ["sonolus:// ..."]
+    "favorites": [
+        "sonolus:// ..."
+        // ...
+    ]
 }
 ```

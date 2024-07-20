@@ -1,11 +1,11 @@
-# `ItemCommunityComment`
+# `ServerItemCommunityComment`
 
-`ItemCommunityComment` provides information of an item community comment.
+`ServerItemCommunityComment` provides information of an item community comment.
 
 ## Syntax
 
 ```ts
-type ItemCommunityComment = {
+type ServerItemCommunityComment = {
     name: string
     author: string
     time: number

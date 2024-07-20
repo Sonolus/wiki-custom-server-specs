@@ -10,28 +10,29 @@
 
 ## Query Parameters
 
-| Query Parameter   | Value    | Description                                                                                |
-| :---------------- | :------- | :----------------------------------------------------------------------------------------- |
-| `localization`    | `string` | See [`localization`](../query-parameters/localization.md).                                 |
-| Create Parameters | `any`    | Optional, see [Options Query Parameters](../query-parameters/options-query-parameters.md). |
+| Query Parameter       | Value    | Description                                                                                |
+| :-------------------- | :------- | :----------------------------------------------------------------------------------------- |
+| `localization`        | `string` | See [`localization`](../query-parameters/localization.md).                                 |
+| Configuration Options | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md).           |
+| Create Parameters     | `any`    | Optional, see [Options Query Parameters](../query-parameters/options-query-parameters.md). |
 
 ## Request Headers
 
-| Header              | Value    | Description                                                                              |
-| :------------------ | :------- | :--------------------------------------------------------------------------------------- |
-| `Sonolus-Session`   | `string` | Optional, see [`Sonolus-Session`](../headers/sonolus-session.md).                        |
-| `Sonolus-Signature` | `string` | See [`Sonolus-Signature`](../headers/sonolus-signature.md).                              |
-| `Sonolus-Room-Key`  | `string` | Optional, see [`POST /sonolus/rooms/create`](../endpoints/post-sonolus-rooms-create.md). |
+| Header              | Value    | Description                                                                   |
+| :------------------ | :------- | :---------------------------------------------------------------------------- |
+| `Sonolus-Session`   | `string` | Optional, see [`Sonolus-Session`](../headers/sonolus-session.md).             |
+| `Sonolus-Signature` | `string` | See [`Sonolus-Signature`](../headers/sonolus-signature.md).                   |
+| `Sonolus-Room-Key`  | `string` | Optional, see [`POST /sonolus/rooms/create`](./post-sonolus-rooms-create.md). |
 
 ## Request Body
 
 ```ts
-type JoinRoomRequest = {
+type ServerJoinRoomRequest = {
     type: 'authenticateMultiplayer'
     address: string
     room: string
     time: number
-    userProfile: UserProfile
+    userProfile: ServiceUserProfile
 }
 ```
 
@@ -66,7 +67,7 @@ Server should verify that `time` is recent.
 ## Response Body
 
 ```ts
-type JoinRoomResponse = {
+type ServerJoinRoomResponse = {
     url: string
     type: 'round'
     session: string

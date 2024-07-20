@@ -17,7 +17,7 @@ If user confirms, a `POST` request will be sent to the endpoint.
 ## Request Body
 
 ```ts
-type AuthenticateExternalRequest = {
+type ServerAuthenticateExternalRequest = {
     type: 'authenticateExternal'
     url: string
     time: number

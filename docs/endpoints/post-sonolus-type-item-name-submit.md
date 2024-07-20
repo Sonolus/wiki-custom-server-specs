@@ -1,6 +1,6 @@
-# `POST /sonolus/{type}/{itemName}/community/comments/{commentName}/submit`
+# `POST /sonolus/{type}/{itemName}/submit`
 
-`/sonolus/{type}/{itemName}/community/comments/{commentName}/submit` allows Sonolus app to submit community actions to comment of name `{commentName}` in item of name `{itemName}`.
+`/sonolus/{type}/{itemName}/community/submit` allows Sonolus app to submit actions to item of name `{itemName}`.
 
 ## URL Parameters
 
@@ -8,7 +8,6 @@
 | :------------ | :------- | :------------------------------------------------------------------------------------------------------- |
 | `type`        | `string` | `posts`, `playlists`, `levels`, `skins`, `backgrounds`, `effects`, `particles`, `engines`, or `replays`. |
 | `itemName`    | `string` | Name of item.                                                                                            |
-| `commentName` | `string` | Name of comment.                                                                                         |
 
 ## Query Parameters
 
@@ -26,7 +25,7 @@
 ## Request Body
 
 ```ts
-type ServerSubmitItemCommunityCommentActionRequest = {
+type ServerSubmitItemActionRequest = {
     values: string
 }
 ```
@@ -54,21 +53,21 @@ See [Options Query Parameters](../query-parameters/options-query-parameters.md).
 ## Response Body
 
 ```ts
-type ServerSubmitItemCommunityCommentActionResponse = {
-    shouldUpdateCommunity?: boolean
-    shouldNavigateCommentsToPage?: number
+type ServerSubmitItemActionResponse = {
+    shouldUpdate?: boolean
+    shouldRemove?: boolean
     key: string
     hashes: string[]
 }
 ```
 
-### `shouldUpdateCommunity`
+### `shouldUpdate`
 
-Whether community section should update or not.
+Whether item details view should update or not.
 
-### `shouldNavigateCommentsToPage`
+### `shouldRemove`
 
-Whether comment list should navigate to specified page or not.
+Whether item details view should be removed or not.
 
 ### `key`
 
@@ -80,14 +79,13 @@ Hashes of files needed to be uploaded.
 
 Only files specified in request body `values` can be uploaded.
 
-If not empty, files will be uploaded using [`POST /sonolus/{type}/{itemName}/community/comments/{commentName}/upload`](./post-sonolus-type-item-name-community-comments-comment-name-upload.md).
+If not empty, files will be uploaded using [`POST /sonolus/{type}/{itemName}/upload`](./post-sonolus-type-item-name-upload.md).
 
 ## Examples
 
 ```json
 {
-    "shouldUpdateCommunity": true,
-    "shouldNavigateCommentsToPage": 5,
+    "shouldUpdate": true,
     "key": "...",
     "hashes": [
         // ...

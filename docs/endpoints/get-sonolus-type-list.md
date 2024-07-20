@@ -10,11 +10,12 @@
 
 ## Query Parameters
 
-| Query Parameter   | Value    | Description                                                                      |
-| :---------------- | :------- | :------------------------------------------------------------------------------- |
-| `localization`    | `string` | See [`localization`](../query-parameters/localization.md).                       |
-| `page`            | `number` | See [`page`](../query-parameters/page.md).                                       |
-| Search Parameters | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md). |
+| Query Parameter       | Value    | Description                                                                      |
+| :-------------------- | :------- | :------------------------------------------------------------------------------- |
+| `localization`        | `string` | See [`localization`](../query-parameters/localization.md).                       |
+| Configuration Options | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md). |
+| `page`                | `number` | See [`page`](../query-parameters/page.md).                                       |
+| Search Parameters     | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md). |
 
 ### Search Parameters
 
@@ -46,7 +47,7 @@ None.
 ## Response Body
 
 ```ts
-type ItemList<T> = {
+type ServerItemList<T> = {
     pageCount: number
     items: T[]
     searches?: ServerForm[]
