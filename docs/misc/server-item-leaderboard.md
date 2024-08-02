@@ -1,13 +1,14 @@
-# `ItemLeaderboard`
+# `ServerItemLeaderboard`
 
-`ItemLeaderboard` provides information of an item leaderboard.
+`ServerItemLeaderboard` provides information of an item leaderboard.
 
 ## Syntax
 
 ```ts
-type ItemLeaderboard = {
+type ServerItemLeaderboard = {
     name: string
     title: Text | (string & {})
+    description?: string
 }
 ```
 

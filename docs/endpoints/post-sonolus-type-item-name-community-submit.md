@@ -11,9 +11,10 @@
 
 ## Query Parameters
 
-| Query Parameter | Value    | Description                                                |
-| :-------------- | :------- | :--------------------------------------------------------- |
-| `localization`  | `string` | See [`localization`](../query-parameters/localization.md). |
+| Query Parameter       | Value    | Description                                                                      |
+| :-------------------- | :------- | :------------------------------------------------------------------------------- |
+| `localization`        | `string` | See [`localization`](../query-parameters/localization.md).                       |
+| Configuration Options | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md). |
 
 ## Request Headers
 
@@ -24,7 +25,7 @@
 ## Request Body
 
 ```ts
-type SubmitItemCommunityActionRequest = {
+type ServerSubmitItemCommunityActionRequest = {
     values: string
 }
 ```
@@ -52,9 +53,11 @@ See [Options Query Parameters](../query-parameters/options-query-parameters.md).
 ## Response Body
 
 ```ts
-type SubmitItemCommunityActionResponse = {
+type ServerSubmitItemCommunityActionResponse = {
     shouldUpdateCommunity?: boolean
     shouldNavigateCommentsToPage?: number
+    key: string
+    hashes: string[]
 }
 ```
 
@@ -66,11 +69,27 @@ Whether community section should update or not.
 
 Whether comment list should navigate to specified page or not.
 
+### `key`
+
+Server defined upload key.
+
+### `hashes`
+
+Hashes of files needed to be uploaded.
+
+Only files specified in request body `values` can be uploaded.
+
+If not empty, files will be uploaded using [`POST /sonolus/{type}/{itemName}/community/upload`](./post-sonolus-type-item-name-community-upload.md).
+
 ## Examples
 
 ```json
 {
     "shouldUpdateCommunity": true,
-    "shouldNavigateCommentsToPage": 5
+    "shouldNavigateCommentsToPage": 5,
+    "key": "...",
+    "hashes": [
+        // ...
+    ]
 }
 ```

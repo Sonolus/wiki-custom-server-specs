@@ -10,16 +10,17 @@
 
 ## Query Parameters
 
-| Query Parameter | Value    | Description                                                |
-| :-------------- | :------- | :--------------------------------------------------------- |
-| `localization`  | `string` | See [`localization`](../query-parameters/localization.md). |
+| Query Parameter       | Value    | Description                                                                      |
+| :-------------------- | :------- | :------------------------------------------------------------------------------- |
+| `localization`        | `string` | See [`localization`](../query-parameters/localization.md).                       |
+| Configuration Options | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md). |
 
 ## Request Headers
 
-| Header               | Value    | Description                                                                    |
-| :------------------- | :------- | :----------------------------------------------------------------------------- |
-| `Sonolus-Session`    | `string` | Optional, see [`Sonolus-Session`](../headers/sonolus-session.md).              |
-| `Sonolus-Upload-Key` | `string` | See [`POST /sonolus/{type}/create`](../endpoints/post-sonolus-type-create.md). |
+| Header               | Value    | Description                                                         |
+| :------------------- | :------- | :------------------------------------------------------------------ |
+| `Sonolus-Session`    | `string` | Optional, see [`Sonolus-Session`](../headers/sonolus-session.md).   |
+| `Sonolus-Upload-Key` | `string` | See [`POST /sonolus/{type}/create`](./post-sonolus-type-create.md). |
 
 ## Request Body
 
@@ -41,7 +42,7 @@
 ## Response Body
 
 ```ts
-type UploadItemResponse = {}
+type ServerUploadItemResponse = {}
 ```
 
 ## Examples

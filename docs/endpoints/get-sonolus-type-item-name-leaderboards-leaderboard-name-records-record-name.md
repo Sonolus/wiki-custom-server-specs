@@ -13,9 +13,10 @@
 
 ## Query Parameters
 
-| Query Parameter | Value    | Description                                                |
-| :-------------- | :------- | :--------------------------------------------------------- |
-| `localization`  | `string` | See [`localization`](../query-parameters/localization.md). |
+| Query Parameter       | Value    | Description                                                                      |
+| :-------------------- | :------- | :------------------------------------------------------------------------------- |
+| `localization`        | `string` | See [`localization`](../query-parameters/localization.md).                       |
+| Configuration Options | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md). |
 
 ## Request Headers
 
@@ -44,7 +45,7 @@ None.
 ## Response Body
 
 ```ts
-type ItemLeaderboardRecordDetails = {
+type ServerItemLeaderboardRecordDetails = {
     replays: ReplayItem[]
 }
 ```

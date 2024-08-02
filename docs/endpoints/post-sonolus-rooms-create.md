@@ -8,9 +8,10 @@ None.
 
 ## Query Parameters
 
-| Query Parameter | Value    | Description                                                |
-| :-------------- | :------- | :--------------------------------------------------------- |
-| `localization`  | `string` | See [`localization`](../query-parameters/localization.md). |
+| Query Parameter       | Value    | Description                                                                      |
+| :-------------------- | :------- | :------------------------------------------------------------------------------- |
+| `localization`        | `string` | See [`localization`](../query-parameters/localization.md).                       |
+| Configuration Options | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md). |
 
 ## Request Headers
 
@@ -21,7 +22,7 @@ None.
 ## Request Body
 
 ```ts
-type CreateRoomRequest = {}
+type ServerCreateRoomRequest = {}
 ```
 
 ## Response Code
@@ -40,7 +41,7 @@ type CreateRoomRequest = {}
 ## Response Body
 
 ```ts
-type CreateRoomResponse = {
+type ServerCreateRoomResponse = {
     name: string
     key: string
 }

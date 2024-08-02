@@ -5,9 +5,9 @@
 ## Syntax
 
 ```ts
-type SRL = {
-    hash: string
-    url: string
+type Srl = {
+    hash?: string | null
+    url?: string | null
 }
 ```
 

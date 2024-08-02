@@ -11,9 +11,10 @@
 
 ## Query Parameters
 
-| Query Parameter | Value    | Description                                                |
-| :-------------- | :------- | :--------------------------------------------------------- |
-| `localization`  | `string` | See [`localization`](../query-parameters/localization.md). |
+| Query Parameter       | Value    | Description                                                                      |
+| :-------------------- | :------- | :------------------------------------------------------------------------------- |
+| `localization`        | `string` | See [`localization`](../query-parameters/localization.md).                       |
+| Configuration Options | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md). |
 
 ## Request Headers
 
@@ -42,12 +43,13 @@ None.
 ## Response Body
 
 ```ts
-type ItemDetails<T> = {
+type ServerItemDetails<T> = {
     item: T
-    description: string
+    description?: string
+    actions: ServerForm[]
     hasCommunity: boolean
-    leaderboards: ItemLeaderboard[]
-    sections: ItemSection<T>[]
+    leaderboards: ServerItemLeaderboard[]
+    sections: ServerItemSection[]
 }
 ```
 
@@ -59,6 +61,9 @@ type ItemDetails<T> = {
         // ...
     },
     "description": "Description of the item.",
+    "actions": [
+        // ...
+    ],
     "hasCommunity": true,
     "leaderboards": [
         // ...

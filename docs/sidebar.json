@@ -17,11 +17,15 @@
             "/endpoints/post-sonolus-rooms-create": "POST /sonolus/rooms/create",
             "/endpoints/post-sonolus-type-upload": "POST /sonolus/{type}/upload",
             "/endpoints/get-sonolus-type-item-name": "GET /sonolus/{type}/{itemName}",
+            "/endpoints/post-sonolus-type-item-name-submit": "POST /sonolus/{type}/{itemName}/submit",
+            "/endpoints/post-sonolus-type-item-name-upload": "POST /sonolus/{type}/{itemName}/upload",
             "/endpoints/post-sonolus-rooms-item-name": "POST /sonolus/rooms/{itemName}",
             "/endpoints/get-sonolus-type-item-name-community-info": "GET /sonolus/{type}/{itemName}/community/info",
             "/endpoints/post-sonolus-type-item-name-community-submit": "POST /sonolus/{type}/{itemName}/community/submit",
+            "/endpoints/post-sonolus-type-item-name-community-upload": "POST /sonolus/{type}/{itemName}/community/upload",
             "/endpoints/get-sonolus-type-item-name-community-comments-list": "GET /sonolus/{type}/{itemName}/community/comments/list",
             "/endpoints/post-sonolus-type-item-name-community-comments-comment-name-submit": "POST /sonolus/{type}/{itemName}/community/comments/{commentName}/submit",
+            "/endpoints/post-sonolus-type-item-name-community-comments-comment-name-upload": "POST /sonolus/{type}/{itemName}/community/comments/{commentName}/upload",
             "/endpoints/get-sonolus-type-item-name-leaderboards-leaderboard-name": "GET /sonolus/{type}/{itemName}/leaderboards/{leaderboardName}",
             "/endpoints/get-sonolus-type-item-name-leaderboards-leaderboard-name-records-list": "GET /sonolus/{type}/{itemName}/leaderboards/{leaderboardName}/records/list",
             "/endpoints/get-sonolus-type-item-name-leaderboards-leaderboard-name-records-record-name": "GET /sonolus/{type}/{itemName}/leaderboards/{leaderboardName}/records/{recordName}",
@@ -51,11 +55,12 @@
             "/misc/external-authentication": "External Authentication",
             "/misc/resources": "Resources",
             "/misc/srl": "SRL",
+            "/misc/sil": "SIL",
             "/misc/server-form": "ServerForm",
-            "/misc/item-section": "ItemSection",
-            "/misc/item-community-comment": "ItemCommunityComment",
-            "/misc/item-leaderboard": "ItemLeaderboard",
-            "/misc/item-leaderboard-record": "ItemLeaderboardRecord",
+            "/misc/server-item-section": "ServerItemSection",
+            "/misc/server-item-community-comment": "ServerItemCommunityComment",
+            "/misc/server-item-leaderboard": "ServerItemLeaderboard",
+            "/misc/server-item-leaderboard-record": "ServerItemLeaderboardRecord",
             "/misc/room-item": "RoomItem",
             "/misc/post-item": "PostItem",
             "/misc/playlist-item": "PlaylistItem",
@@ -67,7 +72,7 @@
             "/misc/particle-item": "ParticleItem",
             "/misc/engine-item": "EngineItem",
             "/misc/tag": "Tag",
-            "/misc/user-profile": "UserProfile"
+            "/misc/service-user-profile": "ServiceUserProfile"
         }
     }
 ]

@@ -12,10 +12,11 @@
 
 ## Query Parameters
 
-| Query Parameter | Value    | Description                                                |
-| :-------------- | :------- | :--------------------------------------------------------- |
-| `localization`  | `string` | See [`localization`](../query-parameters/localization.md). |
-| `page`          | `number` | See [`page`](../query-parameters/page.md).                 |
+| Query Parameter       | Value    | Description                                                                      |
+| :-------------------- | :------- | :------------------------------------------------------------------------------- |
+| `localization`        | `string` | See [`localization`](../query-parameters/localization.md).                       |
+| Configuration Options | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md). |
+| `page`                | `number` | See [`page`](../query-parameters/page.md).                                       |
 
 ## Request Headers
 
@@ -44,9 +45,9 @@ None.
 ## Response Body
 
 ```ts
-type ItemLeaderboardRecordList = {
+type ServerItemLeaderboardRecordList = {
     pageCount: number
-    records: ItemLeaderboardRecord[]
+    records: ServerItemLeaderboardRecord[]
 }
 ```
 
