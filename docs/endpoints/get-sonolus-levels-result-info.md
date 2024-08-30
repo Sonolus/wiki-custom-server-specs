@@ -1,12 +1,10 @@
-# `POST /sonolus/{type}/create`
+# `GET /sonolus/levels/result/info`
 
-`/sonolus/{type}/create` allows Sonolus app to create an item.
+`/sonolus/levels/result/info` provides information of level result submission, and is used by Sonolus app to support submitting replay from result screen.
 
 ## URL Parameters
 
-| URL Parameter | Value    | Description                                                                                              |
-| :------------ | :------- | :------------------------------------------------------------------------------------------------------- |
-| `type`        | `string` | `posts`, `playlists`, `levels`, `skins`, `backgrounds`, `effects`, `particles`, `engines`, or `replays`. |
+None.
 
 ## Query Parameters
 
@@ -23,17 +21,7 @@
 
 ## Request Body
 
-```ts
-type ServerCreateItemRequest = {
-    values: string
-}
-```
-
-### `values`
-
-Query parameters of create.
-
-See [Options Query Parameters](../query-parameters/options-query-parameters.md).
+None.
 
 ## Response Code
 
@@ -51,35 +39,21 @@ See [Options Query Parameters](../query-parameters/options-query-parameters.md).
 ## Response Body
 
 ```ts
-type ServerCreateItemResponse = {
-    key: string
-    hashes: string[]
-    shouldUpdateInfo?: boolean
-    shouldNavigateToItem?: string
+type ServerLevelResultInfo = {
+    submits?: ServerForm[]
 }
 ```
 
-### `key`
+### `submits`
 
-Server defined upload key.
-
-### `hashes`
-
-Hashes of files needed to be uploaded.
-
-Only files specified in request body `values` can be uploaded.
-
-If not empty, files will be uploaded using [`POST /sonolus/{type}/upload`](./post-sonolus-type-upload.md).
+If empty or missing, it is treated as submitting replay from result screen is not supported.
 
 ## Examples
 
 ```json
 {
-    "key": "...",
-    "hashes": [
+    "submits": [
         // ...
-    ],
-    "shouldUpdateInfo": true,
-    "shouldNavigateToItem": "..."
+    ]
 }
 ```

@@ -54,10 +54,11 @@ See [Options Query Parameters](../query-parameters/options-query-parameters.md).
 
 ```ts
 type ServerSubmitItemActionResponse = {
-    shouldUpdate?: boolean
-    shouldRemove?: boolean
     key: string
     hashes: string[]
+    shouldUpdateItem?: boolean
+    shouldRemoveItem?: boolean
+    shouldNavigateToItem?: string
 }
 ```
 
@@ -85,10 +86,12 @@ If not empty, files will be uploaded using [`POST /sonolus/{type}/{itemName}/upl
 
 ```json
 {
-    "shouldUpdate": true,
     "key": "...",
     "hashes": [
         // ...
-    ]
+    ],
+    "shouldUpdateItem": true,
+    "shouldRemoveItem": true,
+    "shouldNavigateToItem": "..."
 }
 ```

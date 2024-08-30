@@ -1,13 +1,10 @@
-# `POST /sonolus/{type}/{itemName}/community/submit`
+# `POST /sonolus/levels/result/submit`
 
-`/sonolus/{type}/{itemName}/community/submit` allows Sonolus app to submit community actions to item of name `{itemName}`.
+`/sonolus/levels/result/submit` allows Sonolus app to submit replay from result screen.
 
 ## URL Parameters
 
-| URL Parameter | Value    | Description                                                                                              |
-| :------------ | :------- | :------------------------------------------------------------------------------------------------------- |
-| `type`        | `string` | `posts`, `playlists`, `levels`, `skins`, `backgrounds`, `effects`, `particles`, `engines`, or `replays`. |
-| `itemName`    | `string` | Name of item.                                                                                            |
+None.
 
 ## Query Parameters
 
@@ -25,14 +22,15 @@
 ## Request Body
 
 ```ts
-type ServerSubmitItemCommunityActionRequest = {
+type ServerSubmitLevelResultRequest = {
+    replay: ReplayItem
     values: string
 }
 ```
 
 ### `values`
 
-Query parameters of submitted action.
+Query parameters of submit.
 
 See [Options Query Parameters](../query-parameters/options-query-parameters.md).
 
@@ -42,7 +40,6 @@ See [Options Query Parameters](../query-parameters/options-query-parameters.md).
 | :----------------- | :---------------------------------- |
 | `200 OK`           |                                     |
 | `401 Unauthorized` | Authentication required or expired. |
-| `404 Not Found`    |                                     |
 
 ## Response Headers
 
@@ -53,22 +50,11 @@ See [Options Query Parameters](../query-parameters/options-query-parameters.md).
 ## Response Body
 
 ```ts
-type ServerSubmitItemCommunityActionResponse = {
+type ServerSubmitLevelResultResponse = {
     key: string
     hashes: string[]
-    shouldUpdateCommunity?: boolean
-    shouldUpdateComments?: boolean
-    shouldNavigateCommentsToPage?: number
 }
 ```
-
-### `shouldUpdateCommunity`
-
-Whether community section should update or not.
-
-### `shouldNavigateCommentsToPage`
-
-Whether comment list should navigate to specified page or not.
 
 ### `key`
 
@@ -78,9 +64,9 @@ Server defined upload key.
 
 Hashes of files needed to be uploaded.
 
-Only files specified in request body `values` can be uploaded.
+Only files specified in request body `replay` and `values` can be uploaded.
 
-If not empty, files will be uploaded using [`POST /sonolus/{type}/{itemName}/community/upload`](./post-sonolus-type-item-name-community-upload.md).
+If not empty, files will be uploaded using [`POST /sonolus/levels/result/upload`](./post-sonolus-levels-result-upload.md).
 
 ## Examples
 
@@ -89,9 +75,6 @@ If not empty, files will be uploaded using [`POST /sonolus/{type}/{itemName}/com
     "key": "...",
     "hashes": [
         // ...
-    ],
-    "shouldUpdateCommunity": true,
-    "shouldUpdateComments": true,
-    "shouldNavigateCommentsToPage": 5
+    ]
 }
 ```

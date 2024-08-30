@@ -52,4 +52,16 @@ None.
 
 ## Response Body
 
-None.
+## Response Body
+
+```ts
+type ServiceAuthenticateExternalResponse = ServerMessage
+```
+
+## Examples
+
+```json
+{
+    "message": "..."
+}
+```
