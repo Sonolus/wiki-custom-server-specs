@@ -20,6 +20,8 @@ type ServerItemSection =
 type ServerItemSectionTyped<TItemType, TItem> = {
     title: Text | (string & {})
     icon?: Icon | (string & {})
+    description?: string
+    help?: string
     itemType: TItemType
     items: TItem[]
     search?: ServerForm

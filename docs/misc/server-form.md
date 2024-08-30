@@ -10,6 +10,7 @@ type ServerForm = {
     title: Text | (string & {})
     icon?: Icon | (string & {})
     description?: string
+    help?: string
     requireConfirmation: boolean
     options: ServerOption[]
 }
@@ -147,6 +148,7 @@ If `true`, player is required to modify the value.
 {
     "type": "advanced",
     "title": "#ADVANCED",
+    "requireConfirmation": false,
     "options": [
         {
             "query": "keywords",

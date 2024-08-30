@@ -55,10 +55,11 @@ See [Options Query Parameters](../query-parameters/options-query-parameters.md).
 
 ```ts
 type ServerSubmitItemCommunityCommentActionResponse = {
-    shouldUpdateCommunity?: boolean
-    shouldNavigateCommentsToPage?: number
     key: string
     hashes: string[]
+    shouldUpdateCommunity?: boolean
+    shouldUpdateComments?: boolean
+    shouldNavigateCommentsToPage?: number
 }
 ```
 
@@ -86,11 +87,12 @@ If not empty, files will be uploaded using [`POST /sonolus/{type}/{itemName}/com
 
 ```json
 {
-    "shouldUpdateCommunity": true,
-    "shouldNavigateCommentsToPage": 5,
     "key": "...",
     "hashes": [
         // ...
-    ]
+    ],
+    "shouldUpdateCommunity": true,
+    "shouldUpdateComments": true,
+    "shouldNavigateCommentsToPage": 5
 }
 ```
