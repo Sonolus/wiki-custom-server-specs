@@ -17,6 +17,7 @@
 | `localization`        | `string` | See [`localization`](../query-parameters/localization.md).                       |
 | Configuration Options | `any`    | See [Options Query Parameters](../query-parameters/options-query-parameters.md). |
 | `page`                | `number` | See [`page`](../query-parameters/page.md).                                       |
+| `cursor`              | `string` | See [`cursor`](../query-parameters/cursor.md).                                   |
 
 ## Request Headers
 
@@ -47,13 +48,18 @@ None.
 ```ts
 type ServerItemLeaderboardRecordList = {
     pageCount: number
+    cursor?: string
     records: ServerItemLeaderboardRecord[]
 }
 ```
 
 ### `pageCount`
 
-If `-1` is used, the list is treated as having infinite pagination.
+If negative value is used, the list uses cursor pagination.
+
+### `cursor`
+
+Only has effect under cursor pagination. If present, next page is available and will be requested with the cursor value.
 
 ### `comments`
 

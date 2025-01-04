@@ -79,8 +79,11 @@ type ServerSelectOption = {
     description?: string
     required: boolean
     type: 'select'
-    def: number
-    values: (Text | (string & {}))[]
+    def: string
+    values: {
+        name: string
+        title: Text | (string & {})
+    }[]
 }
 
 type ServerMultiOption = {
@@ -90,7 +93,10 @@ type ServerMultiOption = {
     required: boolean
     type: 'multi'
     def: boolean[]
-    values: (Text | (string & {}))[]
+    values: {
+        name: string
+        title: Text | (string & {})
+    }[]
 }
 
 type ServerServerItemOption = {
@@ -131,6 +137,7 @@ type ServerFileOption = {
     description?: string
     required: boolean
     type: 'file'
+    def: string
 }
 ```
 
@@ -184,7 +191,7 @@ If `true`, player is required to modify the value.
             "name": "#GENRE",
             "required": false,
             "type": "select",
-            "def": 0,
+            "def": "...",
             "values": [
                 // ...
             ]
@@ -208,5 +215,5 @@ If `true`, player is required to modify the value.
 When user submits, the following query parameters will be sent:
 
 ```url
-?type=advanced&keywords=expert&minRating=75&random=1&genre=3&difficulty=10011
+?type=advanced&keywords=expert&minRating=75&random=1&genre=pop&difficulty=easy,normal,hard
 ```
