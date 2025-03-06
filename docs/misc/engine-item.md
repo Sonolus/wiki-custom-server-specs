@@ -8,7 +8,7 @@
 type EngineItem = {
     name: string
     source?: string
-    version: 12
+    version: 13
     title: string
     subtitle: string
     author: string
@@ -46,7 +46,7 @@ Default items to use with the engine.
 ```json
 {
     "name": "bandori",
-    "version": 12,
+    "version": 13,
     "title": "BanG Dream!",
     "subtitle": "BanG Dream! Girls Band Party!",
     "author": "Burrito",

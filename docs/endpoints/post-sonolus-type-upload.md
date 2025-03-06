@@ -42,7 +42,10 @@
 ## Response Body
 
 ```ts
-type ServerUploadItemResponse = {}
+type ServerUploadItemResponse = {
+    shouldUpdateInfo?: boolean
+    shouldNavigateToItem?: string
+}
 ```
 
 ## Examples
