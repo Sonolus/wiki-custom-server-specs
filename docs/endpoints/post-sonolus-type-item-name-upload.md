@@ -44,7 +44,11 @@
 ## Response Body
 
 ```ts
-type ServerUploadItemActionResponse = {}
+type ServerUploadItemActionResponse = {
+    shouldUpdateItem?: boolean
+    shouldRemoveItem?: boolean
+    shouldNavigateToItem?: string
+}
 ```
 
 ## Examples

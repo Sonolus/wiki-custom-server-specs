@@ -44,7 +44,11 @@
 ## Response Body
 
 ```ts
-type ServerUploadItemCommunityActionResponse = {}
+type ServerUploadItemCommunityActionResponse = {
+    shouldUpdateCommunity?: boolean
+    shouldUpdateComments?: boolean
+    shouldNavigateCommentsToPage?: number
+}
 ```
 
 ## Examples
